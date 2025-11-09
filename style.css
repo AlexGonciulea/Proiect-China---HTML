@@ -1,233 +1,435 @@
-/* Responsive layout updates:
-   - added .zid-area to horizontally place zid image + zid text and vertically center them on wide screens
-   - centered imn title and moved/centered the "Traducere" button above the audio
-   - kept previous gradient text, panels and hover animations
-*/
-
-/* Basic reset */
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; color: #111; background: #f7f7f8; }
-img { max-width: 100%; height: auto; display: block; }
-
-/* Page container */
-.container {
-  width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
+.story-script-regular {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* Header */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    color: #222;
+    text-align: center;
+}
+
+/* Titlu principal */
 header {
-  background: #0a2b5a;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-header h1 {
-  margin: 0;
-  font-size: clamp(1.4rem, 2.4vw, 2.25rem);
-  font-family: 'Story Script', cursive;
-  /* gradient text */
-  background: linear-gradient(90deg, #ff7a18 0%, #af002d 45%, #319197 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+    background-color: #c8102e;
+    color: white;
+    padding: 1px 0;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-/* Cuprins */
+/* ---- Cuprinsul animat ---- */
 .cuprins-modern {
-  position: fixed;
-  left: 1rem;
-  top: 1rem;
-  z-index: 30;
+    width: 300px;
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
 }
+
 .cuprins-btn {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 0.4rem 0.6rem;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-}
-.cuprins-lista {
-  display: none;
-  margin-top: 0.5rem;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 0.5rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-.cuprins-modern.active .cuprins-lista { display: block; }
-.cuprins-lista ul { margin: 0; padding: 0; list-style: none;}
-.cuprins-lista a { color: #0a2b5a; text-decoration: none; display: block; padding: 0.25rem 0; }
-
-/* Two-column layout */
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 1.5rem;
-  align-items: start;
-  margin-top: 1.25rem;
-}
-
-/* On smaller screens stack columns */
-@media (max-width: 900px) {
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Boxes and panels */
-.BoxDeImagine { background: transparent; border-radius: 6px; }
-.panel-white {
-  background: rgba(255,255,255,0.96);
-  padding: 0.9rem;
-  border-radius: 10px;
-  box-shadow: 0 8px 28px rgba(12,18,28,0.06);
-}
-
-/* XI box */
-.xi-box { max-width: 360px; margin: 0; }
-.xi-box #XiJinDefault { width: 100%; height: auto; border-radius: 6px; }
-
-/* ZID AREA: put image and text side-by-side and vertically center them on wide screens */
-.zid-area {
-  display: block;              /* stacked by default for small screens */
-  gap: 1rem;
-  align-items: center;
-}
-.zid-box { max-width: 100%; }
-.zid-box #zidChina { width: 100%; height: auto; border-radius: 6px; }
-#BoxDeScrisZid { margin: 0; }
-
-/* On wider screens make zid-area a horizontal flex so text vertically centers to image middle */
-@media (min-width: 900px) {
-  .zid-area {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 22px;
+    padding: 15px 20px;
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center; /* vertical centering relative to image */
-  }
-  .zid-box { flex: 0 0 48%; }        /* approx half width for image area */
-  #BoxDeScrisZid { flex: 1 1 52%; }  /* remaining width for text */
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Stema */
-.stema-box { margin-top: 1rem; max-width: 220px; padding: 0.6rem; }
-.stema-box #pozaStema { width: 100%; height: auto; }
-
-/* Flag centered */
-.steag-link { display: block; text-align: center; }
-.steag {
-  width: 120px;
-  height: auto;
-  margin: 0.75rem auto 0;
-  display: inline-block;
+.cuprins-btn:hover {
+    background-color: #f5f5f5;
+    color: #c8102e;
 }
 
-/* Titles/text gradient */
-.titlu-intro,
-#NumePres,
-#zid1,
-#textStema {
-  background: linear-gradient(90deg, #ff7a18 0%, #af002d 45%, #319197 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
+.sageata {
+    transition: transform 0.4s ease;
 }
 
-/* Intro and buttons */
-.intro-container { padding: 0.5rem 0; }
-.titlu-intro { font-size: clamp(1.1rem, 2.6vw, 1.6rem); margin: 0 0 0.5rem 0; }
+.cuprins-lista {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+    padding-left: 30px;
+}
+
+.cuprins-lista ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cuprins-lista li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cuprins-lista li a {
+    text-decoration: none;
+    color: #222;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.cuprins-lista li a:hover {
+    color: #c8102e;
+    transform: translateX(5px);
+}
+
+.cuprins-modern.active .cuprins-lista {
+    max-height: 400px;
+    opacity: 1;
+}
+
+.cuprins-modern.active .sageata {
+    transform: rotate(90deg);
+}
+
+/* ---- Conținut principal ---- */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.titlu-intro {
+    font-size: 40px;
+    font-family: monospace;
+    margin: 0;
+}
+
 .butDeTradus {
-  padding: 0.35rem 0.6rem;
-  border: 1px solid #0a2b5a;
-  background: white;
-  color: #0a2b5a;
-  border-radius: 6px;
-  cursor: pointer;
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #c8102e;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Text blocks */
-.text-box {
-  background: transparent;
-  padding: 0.9rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-  line-height: 1.5;
-  font-size: clamp(0.9rem, 1.8vw, 1rem);
-}
-.pres-text { max-width: 680px; }
-.zid-text { max-width: 360px; }
-
-/* IMN section: center title and button; make sure button is above audio and centered */
-.imn { margin-top: 1rem; }
-.imn-container { display: flex; flex-direction: column; gap: 0.4rem; }
-.center-content { align-items: center; text-align: center; }
-.center-button {
-  display: inline-block;
-  margin: 0.25rem auto 0;
+.butDeTradus:hover {
+    background-color: #a60d24;
 }
 
-/* audio full width */
-.imn audio { width: 100%; margin-top: 0.5rem; }
-
-/* Reclama (banner) */
-.reclama-wrapper { display: flex; justify-content: center; margin: 2.5rem 0 4rem 0; }
-#BoxReclama img { max-width: 720px; width: 90%; height: auto; border-radius: 6px; }
-
-/* Image hover animations */
-.BoxDeImagine img,
-.steag,
-#BoxReclama img,
-.zid-box img,
-.xi-box img,
-.stema-box img {
-  transition: transform 320ms cubic-bezier(.2,.9,.2,1), box-shadow 320ms cubic-bezier(.2,.9,.2,1);
-  will-change: transform;
-  transform-origin: center center;
+/* ---- Imaginea cu steagul ---- */
+.steag-link {
+    display: block;
+    margin: 30px auto;
+    width: fit-content;
 }
 
-.BoxDeImagine img:hover,
-.steag:hover,
-#BoxReclama img:hover,
-.zid-box img:hover,
-.xi-box img:hover,
-.stema-box img:hover {
-  transform: translateY(-6px) scale(1.025);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+.steag {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
-#BoxReclama img:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 24px 56px rgba(0,0,0,0.22);
+.steag:hover {
+    transform: scale(1.05);
 }
 
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .BoxDeImagine img,
-  .steag,
-  #BoxReclama img,
-  .zid-box img,
-  .xi-box img,
-  .stema-box img {
-    transition: none;
+/* ---- Secțiunea cu imnul ---- */
+.imn {
+    margin-top: 20px;
+}
+
+audio {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.imn-container {
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+    gap: 15px;                
+    flex-wrap: wrap;          /* se adaptează pe mobil */
+}
+
+.imn-container p {
+    margin: 0;
+    font-size: 20px;
+}
+
+#XiJinDefault {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#XiJinDefault:hover {
+    transform: scale(1.05);
+}
+
+.BoxDeImagine {
+    display: flex; 
+    justify-content:center; 
+    float:left; 
+    align-items: center; 
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    border-style:solid;
+    border-color:white;
+    background-color: white;
+    box-shadow: white;
+}
+
+#NumePres {
+    position:absolute;
+    margin-bottom: 350px;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+#Pres {
+    position:absolute;
+    margin-top: 340px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#Pres2 {
+    position:absolute;
+    margin-top: 390px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#zidChina {
+    width: 265px;
+    height: 265px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#zidChina:hover {
+    transform: scale(1.05);
+}
+
+#zid1 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 365px;
+}
+
+#zid2 {
+    position:absolute;
+    margin-top: 350px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#BoxDeScrisPres {
+    float: left;
+    width: 500px;
+    height: 120px;
+    border-style:solid;
+    margin-left: 135px;
+    border-width: 10px;
+    border-radius: 15px;
+    background:linear-gradient(red, yellow);
+    border-color: #f7f8fa;
+}
+
+#textPres {
+    font-family: "Story Script", sans-serif;
+    font-weight: bold;
+}
+
+#BoxDeScrisZid {
+    width: 500px;
+    height: 120px;
+    border-style:solid;
+    margin-left: 135px;
+    border-width: 10px;
+    border-radius: 15px;
+    background:linear-gradient(red, yellow);
+    border-color: #f7f8fa;
+}
+
+#textZid {
+    font-family: "Story Script", sans-serif;
+    font-weight: bold;
+}
+
+#pozaStema {
+    width: 265px;
+    height: 265px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+#pozaStema:hover {
+    transform: scale(1.05);
+}
+
+#textStema {
+    position: absolute;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 365px;
+}
+
+#BoxReclama {
+    height: 138px;
+    width: 700px;
+    border-style: solid;
+    border-color: white;
+    background-color: white;
+    border-radius: 5px;
+    background-color: red;
+}
+
+#BoxDeImaginiMulte {
+    float: both;
+    width: 100%;
+    height: 100%;
+    border-color: red;
+    
+}
+
+#XiJinTrigger {
+    scale: 150%;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    display: block;          
+    margin-left: auto;       
+    margin-right: 0;
+    transform-origin: center center;
+    animation: rotireXi 0.75s linear infinite;
+}
+
+@keyframes rotireXi {
+  0% {
+    transform: translate(200px, 150px) rotate(0deg);
   }
-  .BoxDeImagine img:hover,
-  .steag:hover,
-  #BoxReclama img:hover { transform: none; box-shadow: none; }
+  100% {
+    transform: translate(200px, 150px) rotate(-360deg);
+  }
 }
 
-/* Larger screen tweaks */
-@media (min-width: 1100px) {
-  .two-col { grid-template-columns: 1fr 420px; gap: 2.25rem; }
-  .xi-box { max-width: 420px; }
-  .zid-box img { max-width: 420px; }
+#XiJinTrigger:hover {
+  animation-play-state: paused;
+  cursor: pointer; 
 }
+
+#RegeleChinei {
+    scale: 150%;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    display: block;          
+    margin-left: auto;       
+    margin-right: 0;
+    transform-origin: center center;
+    animation: rotireRe 0.75s linear infinite;
+}
+
+@keyframes rotireRe {
+  0% {
+    transform: translate(1400px, 150px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1400px, 150px) rotate(-360deg);
+  }
+}
+
+#RegeleChinei:hover {
+  animation-play-state: paused;
+  cursor: pointer; 
+}
+
+#CeDragut {
+    scale: 150%;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    display: block;          
+    margin-left: auto;       
+    margin-right: 0;
+    transform-origin: center center;
+    animation: rotireCD 0.75s linear infinite;
+}
+
+#CeDragut:hover {
+  animation-play-state: paused;
+  cursor: pointer; 
+}
+
+@keyframes rotireCD {
+  0% {
+    transform: translate(790px, 640px) rotateY(0deg);
+  }
+  100% {
+    transform: translate(790px, 640px) rotateY(360deg);
+  }
+}
+
+#Rec1 {
+    opacity: 0;
+    transform: translate(100px , 350px);
+    animation: fadeIn 1s ease forwards;
+}
+
+#Rec2 {
+    transform: translate(-40px, -250px);
+    position: fixed;
+    opacity: 0;
+    right: 0;
+    bottom: 0;
+    animation: fadeIn 1s ease 4s forwards;
+    scale: 120%;
+}
+
+#Rec3 {
+    transform: translate(-40px, -30px);
+    position: fixed;
+    opacity: 0;
+    right: 0;
+    bottom: 0;
+    animation: fadeIn 1s ease 2s forwards;
+    scale: 120%;
+}
+
+#VidBun {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    scale: 200%;
+    transform: translate(100px , -100px);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+

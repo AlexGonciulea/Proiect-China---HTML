@@ -1,0 +1,433 @@
+/* Responsive rewrite with gradient text, image hover animations,
+   and added whiteish panels behind presedinte, zid and stema sections.
+   Keeps all original elements & IDs intact. */
+
+/* Basic reset */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; color: #111; background: #f7f7f8; }
+img { max-width: 100%; height: auto; display: block; }
+
+div {
+  font-family: "Story Script", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Page container */
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/* Header */
+header {
+  background: #0a2b5a;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.4vw, 2.25rem);
+  font-family: 'Story Script', cursive;
+  /* gradient text */
+  background: linear-gradient(90deg, #ff7a18 0%, #af002d 45%, #319197 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Cuprins (unchanged behavior, styled responsively) */
+.cuprins-modern {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 30;
+}
+.cuprins-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.cuprins-lista {
+  display: none;
+  margin-top: 0.5rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.cuprins-modern.active .cuprins-lista { display: block; }
+.cuprins-lista ul { margin: 0; padding: 0; list-style: none;}
+.cuprins-lista a { color: #0a2b5a; text-decoration: none; display: block; padding: 0.25rem 0; }
+
+/* Two-column layout */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 1.5rem;
+  align-items: start;
+  margin-top: 1.25rem;
+}
+
+/* On smaller screens stack columns */
+@media (max-width: 900px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Boxes for images: keep class name BoxDeImagine for compatibility with existing CSS/JS (if any) */
+.BoxDeImagine {
+  background: transparent;
+  border-radius: 6px;
+}
+
+/* ----- NEW: whiteish panels behind specific sections ----- */
+/* Apply a soft white panel behind: president image/text, Great Wall image/text, and emblem */
+.panel-white {
+  background: rgba(255,255,255,0.96); /* almost white, slightly soft */
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(12,18,28,0.06);
+}
+
+/* Attach the panel styling to the specific elements you requested */
+.xi-box,      /* president image container */
+#BoxDeScrisPres, /* president text box */
+.zid-box,     /* great wall image container */
+#BoxDeScrisZid,  /* great wall text box */
+.stema-box    /* emblem image container */
+{
+  /* make them behave like panels */
+  background: rgba(255,255,255,0.96);
+  padding: 0.9rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(12,18,28,0.06);
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Additional inner spacing to make content breathe inside panels */
+.xi-box { padding-bottom: 0.6rem; }
+.zid-box { padding-bottom: 0.6rem; }
+.stema-box { padding: 0.6rem; }
+
+/* Specific boxes with responsive widths */
+.xi-box {
+  max-width: 360px;
+  margin: 0; /* positioning now handled by grid */
+}
+.xi-box #XiJinDefault { width: 100%; height: auto; border-radius: 6px; }
+
+/* Zid (Great Wall) box: make the image responsive and scaled to column width */
+.zid-box {
+  max-width: 100%;
+}
+.zid-box #zidChina { width: 100%; height: auto; border-radius: 6px; }
+
+/* Stema (emblem) */
+.stema-box {
+  margin-top: 1rem;
+  max-width: 220px;
+}
+.stema-box #pozaStema { width: 100%; height: auto; }
+
+/* ----- Center the flag ----- */
+/* Make the flag centered horizontally within its container */
+.steag-link { display: block; text-align: center; }
+.steag {
+  width: 120px;
+  height: auto;
+  margin: 0.75rem auto 0; /* top margin, centered horizontally */
+  display: inline-block;
+}
+
+/* Titles/text gradient: apply the same gradient effect to other headings/titles */
+.titlu-intro,
+#NumePres,
+#zid1,
+#textStema {
+  background: linear-gradient(90deg, #ff7a18 0%, #af002d 45%, #319197 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* for some browsers */
+}
+
+/* Intro text */
+.intro-container { padding: 0.5rem 0; }
+.titlu-intro { font-size: clamp(1.1rem, 2.6vw, 1.6rem); margin: 0 0 0.5rem 0; }
+.butDeTradus {
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #c8102e;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.butDeTradus:hover {
+    background-color: #a60d24;
+}
+
+/* Text blocks */
+.text-box {
+  background: transparent; /* individual text boxes use the panel styling above */
+  padding: 0.9rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+}
+.pres-text { max-width: 680px; }
+.zid-text { max-width: 360px; }
+
+/* Imn (anthem) section */
+.imn { margin-top: 1rem; }
+.imn audio { width: 100%; }
+
+/* Reclama (banner) center full width */
+.reclama-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0 4rem 0;
+}
+#BoxReclama img { max-width: 720px; width: 90%; height: auto; border-radius: 6px; }
+
+/* ---------------------------
+   Hover animations for images
+   ---------------------------
+*/
+.BoxDeImagine img,
+.steag,
+#BoxReclama img,
+.zid-box img,
+.xi-box img,
+.stema-box img {
+  transition: transform 320ms cubic-bezier(.2,.9,.2,1), box-shadow 320ms cubic-bezier(.2,.9,.2,1);
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.BoxDeImagine img:hover,
+.steag:hover,
+#BoxReclama img:hover,
+.zid-box img:hover,
+.xi-box img:hover,
+.stema-box img:hover {
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+/* Slightly different, playful hover for the reclame banner (larger scale on hover) */
+#BoxReclama img:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 24px 56px rgba(0,0,0,0.22);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .BoxDeImagine img,
+  .steag,
+  #BoxReclama img,
+  .zid-box img,
+  .xi-box img,
+  .stema-box img {
+    transition: none;
+  }
+  .BoxDeImagine img:hover,
+  .steag:hover,
+  #BoxReclama img:hover { transform: none; box-shadow: none; }
+}
+
+/* Fine-tuning spacing on larger screens */
+@media (min-width: 1100px) {
+  .two-col { grid-template-columns: 1fr 420px; gap: 2.25rem; }
+  .xi-box { max-width: 420px; }
+  .zid-box img { max-width: 420px; }
+}
+
+/* Keep compatibility notes:
+   - If you prefer the panels to be slightly more transparent, reduce the rgba alpha (e.g. 0.92).
+   - If you want the text boxes (#BoxDeScrisPres, #BoxDeScrisZid) to match exact padding of image panels,
+     add .text-box { background: rgba(255,255,255,0.96); padding: 0.9rem; box-shadow: ... } or use the .panel-white class.
+*/
+
+/* ---------- Responsive-preserve-desktop patch ---------- */
+/* Keep original absolute positions and inline translate(...) on desktop,
+   but on smaller screens force flow layout so cards don't overlap. */
+
+/* Ensure animations keep final state */
+.boxDeTextInfoIst,
+.boxDeTextInfoCult,
+.boxDeTextInfoEco,
+.boxDeTextInfoGast,
+.boxDeTextInfoGastSpec {
+  animation-fill-mode: forwards; /* preserve final styles after animation */
+  -webkit-animation-fill-mode: forwards;
+  will-change: transform, opacity;
+}
+
+/* Desktop: preserve original absolute positioning so the translate(...) inline styles work */
+@media (min-width: 1100px) {
+  /* containers that previously had fixed heights */
+  #boxInformatiiGeo, #boxDeTextEco, #boxDeTextGast, #boxDeTextCult, .boxDeText {
+    position: relative;
+    min-height: 850px; /* space for absolutely-positioned children */
+  }
+
+  /* make each info block absolutely positioned so the inline transform offsets take effect */
+  .boxDeTextInfoIst,
+  .boxDeTextInfoCult,
+  .boxDeTextInfoEco,
+  .boxDeTextInfoGast,
+  .boxDeTextInfoGastSpec {
+    position: absolute;
+    margin: 0;
+    width: 400px;   /* original desktop width */
+    height: 400px;  /* original desktop height */
+    left: auto;     /* allow inline transform to control final placement */
+    top: auto;
+  }
+
+  /* for gastronomie smaller spec cards */
+  .boxDeTextInfoGastSpec { width: 300px; height: 300px; }
+
+  /* keep header/panel widths similar to original */
+  #boxDeTextGeoGeneral,
+  #boxDeTextIstGeneral,
+  #boxDeTextCultGeneral,
+  #boxDeTextEcoGeneral,
+  #boxDeTextGastGeneral {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Mobile / Tablet: remove absolute positioning and inline translate offsets so blocks stack in flow */
+@media (max-width: 1099px) {
+  /* let containers grow naturally */
+  #boxInformatiiGeo, #boxDeTextEco, #boxDeTextGast, #boxDeTextCult, .boxDeText {
+    position: static !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 0.5rem;
+  }
+
+  /* convert previously absolute cards into stacked responsive cards */
+  .boxDeTextInfoIst,
+  .boxDeTextInfoCult,
+  .boxDeTextInfoEco,
+  .boxDeTextInfoGast,
+  .boxDeTextInfoGastSpec {
+    position: relative !important;
+    transform: none !important;         /* ignore inline translate(...) offsets */
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0.6rem 0 !important;
+    opacity: 1 !important;               /* if animation doesn't run, ensure block is visible */
+  }
+
+  /* ensure images inside cards remain responsive and don't trigger overflow */
+  .boxDeTextInfoIst img,
+  .boxDeTextInfoCult img,
+  .boxDeTextInfoEco img,
+  .boxDeTextInfoGast img {
+    width: 36%;
+    max-width: 160px;
+  }
+
+  /* center the header panels and make them full width on small screens */
+  #boxDeTextGeoGeneral,
+  #boxDeTextIstGeneral,
+  #boxDeTextCultGeneral,
+  #boxDeTextEcoGeneral,
+  #boxDeTextGastGeneral {
+    width: calc(100% - 2rem);
+    margin: 0.75rem auto;
+    box-sizing: border-box;
+  }
+}
+
+/* Safety: if some elements still have 0 height or are invisible due to previous rules, force them visible */
+.boxDeTextInfoIst[style*="animation"], 
+.boxDeTextInfoCult[style*="animation"],
+.boxDeTextInfoEco[style*="animation"],
+.boxDeTextInfoGast[style*="animation"],
+.boxDeTextInfoGastSpec[style*="animation"] {
+  /* allow animations declared inline to take effect; fallback opacity */
+  opacity: 1;
+}
+
+/* Keep prefer-reduced-motion respect (still honored by existing rules) */
+@media (prefers-reduced-motion: reduce) {
+  .boxDeTextInfoIst,
+  .boxDeTextInfoCult,
+  .boxDeTextInfoEco,
+  .boxDeTextInfoGast,
+  .boxDeTextInfoGastSpec {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+/* ---------- end patch ---------- */
+
+@keyframes venireDinDreapta3 {
+  from {
+    transform: translate(2000px , 350px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(absolute);
+    opacity: 1;
+  }
+}
+
+@keyframes venireDinDreapta2 {
+  from {
+    transform: translate(2000px , 450px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(absolute);
+    opacity: 1;
+  }
+}
+
+@keyframes venireDinDreapta1 {
+  from {
+    transform: translate(2000px , 250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(absolute);
+    opacity: 1;
+  }
+}
+
+@keyframes aparitie {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
