@@ -3,183 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China</title>
+    <meta name="description" content="Ghid complet despre China: istorie, cultură, geografie, economie și gastronomie. Informații detaliate despre Republica Populară Chineză.">
+    <meta name="keywords" content="China, Republica Populară Chineză, cultură chineză, istorie China, economie China">
+    <meta name="author" content="Encyclopedia China">
+    <!-- Open Graph -->
+    <meta property="og:title" content="China - Enciclopedia Completă">
+    <meta property="og:description" content="Ghid complet despre China: istorie, cultură, geografie, economie și gastronomie.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/index.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1200">
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "China - Enciclopedia Completă",
+      "description": "Ghid complet despre China: istorie, cultură, geografie, economie și gastronomie.",
+      "author": {
+        "@type": "Organization",
+        "name": "Encyclopedia China"
+      }
+    }
+    </script>
+    <title>China - Enciclopedia Completă</title>
+    <link rel="canonical" href="https://example.com/index.html">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <h1>China</h1>
+    <!-- Header Fix -->
+    <header class="header-fixed">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo">
+                    <span class="logo-icon">��️</span>
+                    <span class="logo-text">Encyclopedia China</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link active">Acasă</a>
+                <a href="istorie.html" class="nav-link">Istorie</a>
+                <a href="cultura.html" class="nav-link">Cultură</a>
+                <a href="geografie.html" class="nav-link">Geografie</a>
+                <a href="economie.html" class="nav-link">Economie</a>
+                <a href="gastronomie.html" class="nav-link">Gastronomie</a>
+            </nav>
+            <div class="header-right">
+                <div class="search-container">
+                    <input type="search" class="search-input" id="globalSearch" placeholder="Caută în enciclopedie..." autocomplete="off">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+                <select class="language-selector" id="langSelector">
+                    <option value="ro">🇷🇴 Română</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="zh">🇨🇳 中文</option>
+                </select>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <!-- Cuprinsul animat -->
-    <div class="cuprins-modern">
-        <button class="cuprins-btn" onclick="toggleCuprins()">
-            <svg class="sageata" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-            <span>Cuprins</span>
-        </button>
+    <!-- Main Content -->
+    <div class="page-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-sticky">
+                <!-- Infobox -->
+                <div class="infobox">
+                    <h3 class="infobox-title">Republica Populară Chineză</h3>
+                    <div class="infobox-image">
+                        <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=400" alt="Marele Zid Chinezesc">
+                    </div>
+                    <table class="infobox-table">
+                        <tr>
+                            <td class="info-label">Capitală</td>
+                            <td class="info-value">Beijing</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Populație</td>
+                            <td class="info-value">1,4 miliarde</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Suprafață</td>
+                            <td class="info-value">9,6 milioane km²</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Limba oficială</td>
+                            <td class="info-value">Mandarin</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Monedă</td>
+                            <td class="info-value">Yuan (CNY)</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">PIB</td>
+                            <td class="info-value">$17,9 trilioane</td>
+                        </tr>
+                    </table>
+                </div>
 
-        <div class="cuprins-lista">
-            <ul>
-                <li><a href="istorie.html">Istorie</a></li>
-                <li><a href="geografie.html">Geografie</a></li>
-                <li><a href="cultura.html">Cultură</a></li>
-                <li><a href="economie.html">Economie</a></li>
-                <li><a href="gastronomie.html">Gastronomie</a></li>
-            </ul>
-        </div>
-    </div>
+                <!-- Table of Contents -->
+                <nav class="toc">
+                    <h3 class="toc-title">Cuprins</h3>
+                    <ul class="toc-list" id="tocList">
+                        <li><a href="#introducere">Introducere</a></li>
+                        <li><a href="#prezentare-generala">Prezentare Generală</a></li>
+                        <li><a href="#geografie-scurta">Geografie</a></li>
+                        <li><a href="#economie-scurta">Economie</a></li>
+                        <li><a href="#cultura-scurta">Cultură</a></li>
+                        <li><a href="#referinte">Referințe</a></li>
+                    </ul>
+                </nav>
 
-    <!-- Conținut principal -->
+                <!-- Quick Links -->
+                <div class="quick-links">
+                    <h3 class="quick-links-title">Linkuri Rapide</h3>
+                    <ul class="quick-links-list">
+                        <li><a href="#" class="quick-link" id="printPage">📄 Versiune tipărire</a></li>
+                        <li><a href="#" class="quick-link" id="permalink">🔗 Permalink</a></li>
+                        <li><a href="#" class="quick-link" id="citeThis">📚 Citează pagina</a></li>
+                        <li><a href="#" class="quick-link" id="pageHistory">📜 Istoric pagină</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
 
-    <!-- Xi Jin Ping-->  
-    <section class="intro">
-        <div class="BoxDeImagine" style="margin: 45px 100px 50px 200px;" >
-            <p id="NumePres"> Xi Jinping</p>
-            <a href="https://ro.wikipedia.org/wiki/Pre%C8%99edintele_Republicii_Populare_Chineze" target="_blank">
-                <img id="XiJinDefault" src="Imagini/Xi_Jinping_2025_(cropped).jpg" title="Dictatorul Chinei">
-            </a>
-            <p id="Pres"> Președintele Republicii</p> <p id="Pres2">Populare Chineze</p>
-        </div>
-    </section>
+        <!-- Main Content Area -->
+        <main class="content-main">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs">
+                <a href="index.html">Acasă</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">China</span>
+            </nav>
 
-    <main>
-        <section class="intro">
-            <div class="intro-container" >
-                <p id="textDeTradus" class="titlu-intro">
-                    <b>Bun venit în China!</b>
+            <!-- Page Title -->
+            <div class="page-header">
+                <h1 class="page-title">China</h1>
+                <p class="page-subtitle">Republica Populară Chineză (中华人民共和国)</p>
+            </div>
+
+            <!-- Introduction Section -->
+            <section id="introducere" class="content-section fade-in">
+                <p class="lead-paragraph">
+                    <strong>China</strong>, oficial cunoscută ca <strong>Republica Populară Chineză</strong> (RPC), este o țară din Asia de Est și cea mai populată țară din lume, cu peste 1,4 miliarde de locuitori. China se întinde pe o suprafață de aproximativ 9,6 milioane de kilometri pătrați, fiind a treia sau a patra cea mai mare țară din lume în funcție de măsurare.<sup class="reference">[1]</sup>
                 </p>
-                <button class="butDeTradus" onclick="schimbaTextAlternativIntro()">
-                    Traducere
-                </button>
-            </div>
-        </section>
-
-        <!-- Marele Zid Chinezesc -->
-        <div class="BoxDeImagine" style="margin: -460px 100px 50px 1050px; clear:both"> 
-            <p id="zid1">Marele Zid chinezesc</p>
-
-            <a href="https://ro.wikipedia.org/wiki/Marele_Zid_Chinezesc" target="_blanc">
-                <img id="zidChina" src="Imagini/zidChina.png" title="Marele Zid Chinezesc">
-            </a>
-
-            <p id="zid2">Lungime de 21.196,18km</p>
-        </div>
-
-            
-      
-
-        <!-- Steagul Chinei -->
-        <a href="https://ro.wikipedia.org/wiki/Drapelul_Chinei" target="_blank" class="steag-link">
-            <img src="Imagini/steag_china.png" alt="Drapelul Chinei" title="Drapelul Chinei" class="steag">
-        </a>
-        
-       
-
-        <!-- Imnul național -->
-        <section class="imn">
-            <div class="imn-container">
-                <p id="textDeTradusImn">
-                    <b><i>"Marșul Voluntarilor"</i> (Imnul Național al Chinei)</b>
+                <p>
+                    Capitala Chinei este <strong>Beijing</strong>, iar cel mai mare oraș este <strong>Shanghai</strong>. Alte orașe majore includ Guangzhou, Shenzhen, Chongqing și Tianjin. China este condusă de Partidul Comunist Chinez (PCC) și funcționează ca o republică socialistă de tip unitar.<sup class="reference">[2]</sup>
                 </p>
-                <button class="butDeTradus" onclick="schimbaTextAlternativImn()">
-                    Traducere
-                </button>
+            </section>
+
+            <!-- General Overview -->
+            <section id="prezentare-generala" class="content-section slide-in-left">
+                <h2 class="section-heading">Prezentare Generală</h2>
+                <div class="two-column-layout">
+                    <div class="column">
+                        <p>
+                            China are una dintre cele mai vechi civilizații continue din lume, cu istorie documentată care se întinde pe mai bine de 3.500 de ani. Țara a fost condusă de numeroase dinastii imperiale până în 1912, când a fost proclamată Republica China. În 1949, după un război civil, Partidul Comunist Chinez a fondat Republica Populară Chineză pe continentul chinezesc.
+                        </p>
+                        <p>
+                            De la introducerea reformelor economice în 1978, China a devenit una dintre cele mai dinamice economii din lume. Țara este a doua cea mai mare economie după PIB nominal și cea mai mare după paritatea puterii de cumpărare. China este recunoscută ca o superputere emergentă și joacă un rol major în politica internațională.
+                        </p>
+                    </div>
+                    <div class="column">
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=600" alt="Shanghai skyline" class="content-image">
+                            <p class="image-caption">Skyline-ul Shanghai, cel mai mare oraș din China</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Geography Brief -->
+            <section id="geografie-scurta" class="content-section slide-in-right">
+                <h2 class="section-heading">Geografie și Climă</h2>
+                <p>
+                    China prezintă o geografie extrem de diversă, de la munții Himalaya în vest până la câmpiile de coastă din est. Țara cuprinde deșerturi vaste, stepă, păduri subtropicale și tundră alpină. Principalele fluvii includ Yangtze (cel mai lung fluviu din Asia), Fluviul Galben și Perlelor.<sup class="reference">[3]</sup>
+                </p>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800" alt="Munții din China" class="content-image">
+                    <p class="image-caption">Peisaj montan spectaculos din provincia Guangxi</p>
+                </div>
+                <div class="info-box-inline">
+                    <h3>Date Geografice Rapide</h3>
+                    <ul>
+                        <li><strong>Punctul cel mai înalt:</strong> Muntele Everest (8.848 m)</li>
+                        <li><strong>Punctul cel mai jos:</strong> Depresiunea Turpan (-154 m)</li>
+                        <li><strong>Lungimea coastei:</strong> 14.500 km</li>
+                        <li><strong>Climat:</strong> De la subarctic la tropical</li>
+                    </ul>
+                </div>
+                <p class="read-more-link">
+                    <a href="geografie.html" class="btn-link">→ Citește mai mult despre Geografia Chinei</a>
+                </p>
+            </section>
+
+            <!-- Economy Brief -->
+            <section id="economie-scurta" class="content-section fade-in">
+                <h2 class="section-heading">Economia Chineză</h2>
+                <p>
+                    China are cea mai mare economie din lume după paritatea puterii de cumpărare și a doua cea mai mare după PIB nominal. Economia chineză este caracterizată de o combinație între planificare centralizată și mecanisme de piață, fiind adesea descrisă ca o "economie socialistă de piață".<sup class="reference">[4]</sup>
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-value">$17,9T</div>
+                        <div class="stat-label">PIB Nominal</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-value">5,2%</div>
+                        <div class="stat-label">Creștere Anuală</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏭</div>
+                        <div class="stat-value">#1</div>
+                        <div class="stat-label">Producție Industrială</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-value">$3,4T</div>
+                        <div class="stat-label">Export Anual</div>
+                    </div>
+                </div>
+                <p class="read-more-link">
+                    <a href="economie.html" class="btn-link">→ Explorează Economia Chinei în detaliu</a>
+                </p>
+            </section>
+
+            <!-- Culture Brief -->
+            <section id="cultura-scurta" class="content-section slide-in-left">
+                <h2 class="section-heading">Cultură și Tradiții</h2>
+                <div class="two-column-layout">
+                    <div class="column">
+                        <p>
+                            Cultura chineză este una dintre cele mai vechi și mai bogate din lume, având o influență profundă asupra civilizațiilor din Asia de Est. Filozofiile confucianismului, taoismului și budismului au modelat valorile și practicile sociale chineze timp de milenii.
+                        </p>
+                        <p>
+                            Artele tradiționale chineze includ caligrafia, pictura cu cerneală, operele Beijing, artele marțiale (kung fu, tai chi), medicina tradițională chineză și numeroase forme de artizanat.<sup class="reference">[5]</sup>
+                        </p>
+                    </div>
+                    <div class="column">
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1516726817505-f5ed825624d8?w=600" alt="Templu chinezesc" class="content-image">
+                            <p class="image-caption">Templu tradițional chinezesc</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="culture-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🎭</span>
+                        <h4>Opera Beijing</h4>
+                        <p>Formă tradițională de teatru chinezesc</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🥋</span>
+                        <h4>Arte Marțiale</h4>
+                        <p>Kung Fu, Tai Chi, Wushu</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🏮</span>
+                        <h4>Festivaluri</h4>
+                        <p>Anul Nou Chinezesc, Festivalul Lunii</p>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">✍️</span>
+                        <h4>Caligrafie</h4>
+                        <p>Artă antică a scrierii chineze</p>
+                    </div>
+                </div>
+                <p class="read-more-link">
+                    <a href="cultura.html" class="btn-link">→ Descoperă Cultura Chineză</a>
+                </p>
+            </section>
+
+            <!-- References -->
+            <section id="referinte" class="content-section">
+                <h2 class="section-heading">Referințe</h2>
+                <ol class="references-list">
+                    <li>National Bureau of Statistics of China (2023). "China Statistical Yearbook"</li>
+                    <li>CIA World Factbook. "China - Government and Politics"</li>
+                    <li>Ministry of Natural Resources. "Geography of China"</li>
+                    <li>World Bank (2023). "China Economic Overview"</li>
+                    <li>UNESCO. "Chinese Cultural Heritage and Traditions"</li>
+                </ol>
+            </section>
+
+            <!-- Related Articles -->
+            <section class="related-articles">
+                <h3>Articole Înrudite</h3>
+                <div class="related-grid">
+                    <a href="istorie.html" class="related-card">
+                        <span class="related-icon">📜</span>
+                        <span class="related-title">Istoria Chinei</span>
+                    </a>
+                    <a href="cultura.html" class="related-card">
+                        <span class="related-icon">🎨</span>
+                        <span class="related-title">Cultura Chineză</span>
+                    </a>
+                    <a href="gastronomie.html" class="related-card">
+                        <span class="related-icon">🍜</span>
+                        <span class="related-title">Gastronomia Chineză</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Despre</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Despre proiect</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Contribuie</a></li>
+                </ul>
             </div>
-            <audio controls src="Audio/China National anthem Chinese _ English lyrics.mp3"></audio>
-        </section>
-    </main>
-    
-    <!-- Text Detalii Presedinte-->
-    <div id="BoxDeScrisPres">
-        <p id="textPres"> 
-            Xi Jinping s-a născut pe data de 15 iunie 1953 la Beijing, familia trăgându-se din districtul administrativ Fuping, regiunea Shaanxi. Este fiul cel mai tânăr al lui Xi Zhongxun, unul dintre fondatorii mișcării de gherilă comuniste din provincia Shaanxi din nordul Chinei, devenit ulterior vice-prim-ministru.
-        </p>
-    </div>
-
-    <!-- Imagine Stema -->
-     <div class="BoxDeImagine" style="margin: 10px 0px 0px 416px">
-        <p id="textStema">Stema</p>
-        <a href="https://ro.wikipedia.org/wiki/Fi%C8%99ier:National_Emblem_of_the_People%27s_Republic_of_China.svg" target="_blanc">
-            <img id="pozaStema" src="Imagini/stemaChina.png" title="Stema">
-        </a>
-     </div>
-
-    <!-- Text Detalii Zid-->
-    <div id="BoxDeScrisZid" style="margin: 0px 0px 0px 73.25%">
-        <p id="textZid">
-            Marele zid chinezesc a fost construit in secolul 7 I.Hr., cand China era inca impartita in multe state. Dupa unificare, in anul 221 I.Hr., primul imparat al dinastiei Qin, a unit zidurile a 3 state din nord. De atunci, Marele Zid a fost reconstruit, modificat si extins de-a lungul istoriei Chinei, pe mai bine de 2000 de ani.
-        </p>
-    </div>
-
-    <!-- Reclama? -->
-    <a id="reclama" href="reclama.html" target="_blank">
-        <div style="clear:both; display: flex; justify-content: center; margin: 300px 0px 0px 0px">
-            <div id="BoxReclama">
-                <img src="Imagini/cineContoleazaChina.png" title="Afla ADEVARUL !">
+            <div class="footer-section">
+                <h4>Resurse</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Politică confidențialitate</a></li>
+                    <li><a href="#">Termeni utilizare</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Urmărește-ne</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
             </div>
         </div>
-    </a>
+        <div class="footer-copyright">
+            AI vibe coded development by <a href="https://biela.dev/" target="_blank" rel="noopener noreferrer">Biela.dev</a>, powered by <a href="https://teachmecode.ae/" target="_blank" rel="noopener noreferrer">TeachMeCode® Institute</a>
+        </div>
+    </footer>
 
-    <script>
-        
-        function toggleCuprins() {
-            const container = document.querySelector('.cuprins-modern');
-            container.classList.toggle('active');
-        }
-
-        // Închide cuprinsul dacă se dă click în altă parte
-        document.addEventListener('click', (e) => {
-            const cuprins = document.querySelector('.cuprins-modern');
-            if (!cuprins.contains(e.target)) {
-                cuprins.classList.remove('active');
-            }
-        });
-
-        function schimbaTextAlternativImn() {
-            const element = document.getElementById('textDeTradusImn');
-            const textRomania = '<b><i>"Marșul Voluntarilor"</i> (Imnul Național al Chinei)</b>';
-            const textChina = '<b><i>"志工進行曲"</i> (国家国歌)</b>';
-
-            element.innerHTML = element.innerHTML === textRomania ? textChina : textRomania;
-        }
-
-        let traducereIntroChinez = false; // false = română, true = chineză
-
-        function schimbaTextAlternativIntro() {
-            const element = document.getElementById('textDeTradus');
-
-            if (!traducereIntroChinez) {
-            element.innerHTML = '<b>欢迎来到中国!</b>';
-            } else {
-            element.innerHTML = '<b>Bun venit în China!</b>';
-            }
-
-        traducereIntroChinez = !traducereIntroChinez;
-        }
-
-        let traducereImnChinez = false;
-
-        function schimbaTextAlternativImn() {
-            const element = document.getElementById('textDeTradusImn');
-
-            if (!traducereImnChinez) {
-            element.innerHTML = '<b><i>"志工進行曲"</i> (国家国歌)</b>';
-            } else {
-            element.innerHTML = '<b><i>"Marșul Voluntarilor"</i> (Imnul Național al Chinei)</b>';
-            }
-
-            traducereImnChinez = !traducereImnChinez;
-        }
-
-    </script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
-

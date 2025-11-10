@@ -1,109 +1,677 @@
-
-<!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <title>Gastronomia Chineză</title>
-  <link rel="stylesheet" href="stil.css">
-  <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gastronomia Chineză: bucătării regionale, ingrediente, preparate tradiționale și cultură culinară.">
+    <title>Gastronomia Chineză - Encyclopedia China</title>
+    <link rel="canonical" href="https://example.com/gastronomie.html">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header-fixed">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo">
+                    <span class="logo-icon">��️</span>
+                    <span class="logo-text">Encyclopedia China</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Acasă</a>
+                <a href="istorie.html" class="nav-link">Istorie</a>
+                <a href="cultura.html" class="nav-link">Cultură</a>
+                <a href="geografie.html" class="nav-link">Geografie</a>
+                <a href="economie.html" class="nav-link">Economie</a>
+                <a href="gastronomie.html" class="nav-link active">Gastronomie</a>
+            </nav>
+            <div class="header-right">
+                <div class="search-container">
+                    <input type="search" class="search-input" id="globalSearch" placeholder="Caută..." autocomplete="off">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+                <select class="language-selector" id="langSelector">
+                    <option value="ro">🇷🇴 Română</option>
+                    <option value="en">🇬🇧 English</option>
+                </select>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <header>
-    <h1>🍜 Gastronomia Chineză</h1>
-  </header>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-sticky">
+                <div class="infobox">
+                    <h3 class="infobox-title">Gastronomia Chineză</h3>
+                    <div class="infobox-image">
+                        <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?w=400" alt="Mâncare chineză">
+                    </div>
+                    <table class="infobox-table">
+                        <tr>
+                            <td class="info-label">Bucătării majore</td>
+                            <td class="info-value">8 tradiționale</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">UNESCO</td>
+                            <td class="info-value">Patrimoniu cultural</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Filosofie</td>
+                            <td class="info-value">Yin-Yang echilibrat</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Ustensile</td>
+                            <td class="info-value">Bețișoare (筷子)</td>
+                        </tr>
+                    </table>
+                </div>
+                <nav class="toc">
+                    <h3 class="toc-title">Cuprins</h3>
+                    <ul class="toc-list">
+                        <li><a href="#introducere">Introducere</a></li>
+                        <li><a href="#bucatarii">Bucătării Regionale</a></li>
+                        <li><a href="#ingrediente">Ingrediente Cheie</a></li>
+                        <li><a href="#preparate">Preparate Clasice</a></li>
+                        <li><a href="#tehnici">Tehnici Culinare</a></li>
+                        <li><a href="#cultura">Cultura Mesei</a></li>
+                    </ul>
+                </nav>
+                <div class="quick-links">
+                    <h3 class="quick-links-title">Linkuri Rapide</h3>
+                    <ul class="quick-links-list">
+                        <li><a href="#" class="quick-link" id="printPage">📄 Versiune tipărire</a></li>
+                        <li><a href="#" class="quick-link" id="permalink">🔗 Permalink</a></li>
+                        <li><a href="#" class="quick-link" id="citeThis">📚 Citează pagina</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
 
-  <div id="boxDeTextGastGeneral">
-    <p>Bucătăria chineză este una dintre cele mai variate și apreciate din lume. Ea se bazează pe echilibrul dintre gusturi, culori și texturi.</p>
-  </div>
- 
-  <div id="boxDeTextGast">
+        <main class="content-main">
+            <nav class="breadcrumbs">
+                <a href="index.html">Acasă</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Gastronomie</span>
+            </nav>
 
-    <!-- Info Gastro Nord -->
-    <div class="boxDeTextInfoGast" style="transform: translate(1103px , 0px); background: linear-gradient(to bottom , #f5e9e1 , #e8a172); animation: dinSus 0.5s ease-out 2.25s forwards;">
-      <p>Nordul – mâncăruri pe bază de grâu (tăiței, colțunași „dumplings”)</p>
-      <a href="https://cookpad.com/ro/recipes/16850218?ref=search&search_term=chinezesti" target="_blank">
-        <img id="pozaTaitei" src="Imagini/taiteiChin.png" title="Reteta Taitei">
-      </a>
-      <a href="https://www.lalena.ro/reteta/1860/Coltunasi-Chinezesti/" target="_blank">
-        <img id="pozaDump" src="Imagini/dumplingsChin.png" title="Reteta Coltunasi(dumplings)">
-      </a>
+            <div class="page-header">
+                <h1 class="page-title">Gastronomia Chineză</h1>
+                <p class="page-subtitle">O artă culinară milenară cu diversitate regională unică</p>
+            </div>
+
+            <section id="introducere" class="content-section fade-in">
+                <p class="lead-paragraph">
+                    <strong>Bucătăria chineză</strong> este una dintre cele mai diverse și influente tradiții culinare din lume, cu o istorie de peste 4.000 de ani. Filozofia culinară chineză pune accent pe echilibrul dintre culori, arome, texturi și proprietăți nutriționale, reflectând principiile Yin și Yang.<sup class="reference">[1]</sup>
+                </p>
+                <p>
+                    Chinese cuisine is characterized by its regional diversity, with each area developing distinct flavors and techniques based on local climate, ingredients, and cultural traditions. The philosophy of "食医同源" (shí yī tóng yuán - food and medicine share the same origin) underlies much of ChineseDe la mirosul pătrunzător al condimentelor Sichuan până la delicatețea subtilă a dim sum cantonez, gastronomia chineză oferă o paletă incredibilă de gusturi și experiențe senzoriale. Principiul fundamental este că mâncarea nu doar hrănește corpul, ci și menține sănătatea și echilibrul.</p>
+                <div class="philosophy-box">
+                    <h3>🥢 Principiile Gastronomiei Chineze</h3>
+                    <div class="principles-grid">
+                        <div class="principle">
+                            <strong>色 (Sè) - Culoare</strong>
+                            <p>Aspect vizual atractiv și colorat</p>
+                        </div>
+                        <div class="principle">
+                            <strong>香 (Xiāng) - Aromă</strong>
+                            <p>Parfum tentant și plăcut</p>
+                        </div>
+                        <div class="principle">
+                            <strong>味 (Wèi) - Gust</strong>
+                            <p>Sapori echilibrate și armonioase</p>
+                        </div>
+                        <div class="principle">
+                            <strong>形 (Xíng) - Formă</strong>
+                            <p>Prezentare estetică</p>
+                        </div>
+                        <div class="principle">
+                            <strong>意 (Yì) - Semnificație</strong>
+                            <p>Simbolism cultural și filozofic</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="bucatarii" class="content-section slide-in-right">
+                <h2 class="section-heading">Cele Opt Bucătării Regionale</h2>
+                <p>
+                    Bucătăria chineză este tradițional divizată în opt bucătării regionale majore (八大菜系), fiecare cu caracteristici distinctive legate de geografie, climă și cultură locală.
+                </p>
+
+                <div class="cuisines-grid">
+                    <div class="cuisine-card sichuan">
+                        <div class="cuisine-header">
+                            <h3>🌶️ Sichuan (川菜)</h3>
+                            <span class="cuisine-region">Sud-Vest</span>
+                        </div>
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=500" alt="Mâncare Sichuan" class="content-image">
+                            <p class="image-caption">Mapo Tofu - preparat iconic Sichuan</p>
+                        </div>
+                        <p class="cuisine-desc">
+                            Faimoasă pentru aromele <strong>picante și înțepătoare</strong> (麻辣, málà), bucătăria Sichuan folosește abundent piper Sichuan și ardei iuți.
+                        </p>
+                        <h4>Caracteristici:</h4>
+                        <ul class="cuisine-features">
+                            <li>Piper Sichuan (麻椒) - senzație înțepătoare</li>
+                            <li>Paste de ardei fermentat (豆瓣酱)</li>
+                            <li>Preparare wok la temperatură înaltă</li>
+                            <li>Combinație de gusturi: picant, dulce, acrișor</li>
+                        </ul>
+                        <h4>Preparate celebre:</h4>
+                        <ul class="cuisine-dishes">
+                            <li>🍲 Mapo Tofu (麻婆豆腐)</li>
+                            <li>🍲 Kung Pao Chicken (宫保鸡丁)</li>
+                            <li>🍲 Hot Pot Sichuan (四川火锅)</li>
+                            <li>🍲 Dan Dan Noodles (担担面)</li>
+                        </ul>
+                    </div>
+
+                    <div class="cuisine-card cantonese">
+                        <div class="cuisine-header">
+                            <h3>🥟 Cantonez/Yue (粤菜)</h3>
+                            <span class="cuisine-region">Sud (Guangdong)</span>
+                        </div>
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1563245372-03177084db20?w=500" alt="Dim Sum" class="content-image">
+                            <p class="image-caption">Dim Sum - specialitate cantoneză</p>
+                        </div>
+                        <p class="cuisine-desc">
+                            Cea mai cunoscută bucătărie chineză internațional, caracterizată prin <strong>prospețime</strong> și <strong>ușurință</strong>. Motto: "Mănâncă tot ce zboară, cu excepția avioanelor."
+                        </p>
+                        <h4>Caracteristici:</h4>
+                        <ul class="cuisine-features">
+                            <li>Ingrediente proaspete, minimalist preparate</li>
+                            <li>Condimente ușoare pentru a păstra gustul natural</li>
+                            <li>Accent pe fructe de mare</li>
+                            <li>Tehnici: gătit cu abur, sotare rapidă</li>
+                        </ul>
+                        <h4>Preparate celebre:</h4>
+                        <ul class="cuisine-dishes">
+                            <li>🥟 Dim Sum (点心) - varietate de ravioli</li>
+                            <li>🦆 Rață în stil Canton</li>
+                            <li>🍜 Wonton Noodle Soup</li>
+                            <li>🥘 Sweet and Sour Pork</li>
+                        </ul>
+                    </div>
+
+                    <div class="cuisine-card shandong">
+                        <div class="cuisine-header">
+                            <h3>🍖 Shandong (鲁菜)</h3>
+                            <span class="cuisine-region">Nord-Est</span>
+                        </div>
+                        <p class="cuisine-desc">
+                            Cea mai veche bucătărie chineză, influențând bucătăria imperială. Cunoscută pentru <strong>supele clare</strong> și <strong>fructe de mare proaspete</strong>.
+                        </p>
+                        <h4>Caracteristici:</h4>
+                        <ul class="cuisine-features">
+                            <li>Supe clare, delicate și parfumate</li>
+                            <li>Accent pe fructe de mare (coastă Marea Galbenă)</li>
+                            <li>Sotare rapidă la temperatură înaltă</li>
+                            <li>Folosirea pungii și a usturoiului</li>
+                        </ul>
+                        <h4>Preparate celebre:</h4>
+                        <ul class="cuisine-dishes">
+                            <li>🍜 Sweet and Sour Carp</li>
+                            <li>🐚 Braised Sea Cucumber</li>
+                            <li>🥘 Dezhou Braised Chicken</li>
+                        </ul>
+                    </div>
+
+                    <div class="cuisine-card jiangsu">
+                        <div class="cuisine-header">
+                            <h3>🦐 Jiangsu (苏菜)</h3>
+                            <span class="cuisine-region">Est (Shanghai)</span>
+                        </div>
+                        <p class="cuisine-desc">
+                            Cunoscută pentru <strong>prezentare rafinată</strong> și <strong>gusturi dulci-sărate echilibrate</strong>. Bucătăria preferată a curții imperiale.
+                        </p>
+                        <h4>Caracteristici:</h4>
+                        <ul class="cuisine-features">
+                            <li>Gust ușor dulce</li>
+                            <li>Prezentare artistică, tăieturi precise</li>
+                            <li>Fierte înăbușit (红烧) și înfierte lent</li>
+                            <li>Ingrediente de înaltă calitate</li>
+                        </ul>
+                        <h4>Preparate celebre:</h4>
+                        <ul class="cuisine-dishes">
+                            <li>🦆 Nanjing Salted Duck</li>
+                            <li>🦀 Yangcheng Lake Hairy Crab</li>
+                            <li>🐟 Squirrel Mandarin Fish</li>
+                        </ul>
+                    </div>
+
+                    <div class="cuisine-card zhejiang">
+                        <div class="cuisine-header">
+                            <h3>🐟 Zhejiang (浙菜)</h3>
+                            <span class="cuisine-region">Sud-Est</span>
+                        </div>
+                        <p class="cuisine-desc">
+                            Caracterizată prin <strong>prospețime</strong>, <strong>tenditate</strong> și <strong>arome delicate</strong>. Influențe puternice de fructe de mare.
+                        </p>
+                        <h4>Preparate celebre:</h4>
+                        <ul class="cuisine-dishes">
+                            <li>🐟 West Lake Fish in Vinegar Sauce</li>
+                            <li>🥘 Dongpo Pork</li>
+                            <li>🍤 Longjing Shrimp</li>
+                        </ul>
+                    </div>
+
+                    <div class="cuisine-card fujian">
+                        <div class="cuisine-header">
+                            <h3>🍲 Fujian (闽菜)</h3>
+                            <span class="cuisine-region">Sud-Est (Coastă)</span>
+                        </div>
+                        <p class="cuisine-desc">
+                            Specializată în <strong>supele</strong> și <strong>fructele de mare</strong>, cu accent pe <strong>umami</strong> și gusturi complexe.
+                        </p>
+                        <h4>Preparate celebre:</h4>
+                        <ul class="cuisine-dishes">
+                            <li>🍲 Buddha Jumps Over the Wall</li>
+                            <li>🦞 Drunken Ribs</li>
+                        </ul>
+                    </div>
+
+                    <div class="cuisine-card hunan">
+                        <div class="cuisine-header">
+                            <h3>🔥 Hunan (湘菜)</h3>
+                            <span class="cuisine-region">Centru-Sud</span>
+                        </div>
+                        <p class="cuisine-desc">
+                            Similar cu Sichuan dar <strong>mai picantă</strong> și mai puțin înțepătoare. Folosește ardei iuți proaspeți și uscați.
+                        </p>
+                        <h4>Preparate celebre:</h4>
+                        <ul class="cuisine-dishes">
+                            <li>🌶️ Chairman Mao's Red Braised Pork</li>
+                            <li>🐟 Steamed Fish Head with Chili</li>
+                        </ul>
+                    </div>
+
+                    <div class="cuisine-card anhui">
+                        <div class="cuisine-header">
+                            <h3>🍄 Anhui (徽菜)</h3>
+                            <span class="cuisine-region">Est (Munți)</span>
+                        </div>
+                        <p class="cuisine-desc">
+                            Bazată pe <strong>ingrediente sălbatice din munți</strong> și <strong>tehnici de fiert înăbușit</strong>. Mai puțin cunoscută internațional.
+                        </p>
+                        <h4>Preparate celebre:</h4>
+                        <ul class="cuisine-dishes">
+                            <li>🐢 Stewed Soft Shell Turtle</li>
+                            <li>🥘 Braised Mandarin Fish</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ingrediente" class="content-section fade-in">
+                <h2 class="section-heading">Ingrediente Cheie</h2>
+                <p>
+                    Bucătăria chineză folosește o paletă largă de ingrediente, de la elementele de bază până la condimentearoma complexe și ingrediente specializate.
+                </p>
+
+                <div class="ingredients-section">
+                    <div class="ingredient-category">
+                        <h3>🌾 Alimente de Bază (主食)</h3>
+                        <div class="ingredients-grid">
+                            <div class="ingredient-item">
+                                <strong>Orez (米饭)</strong>
+                                <p>Alimentul de bază în sud, consumat la fiecare masă</p>
+                            </div>
+                            <div class="ingredient-item">
+                                <strong>Taitei (面条)</strong>
+                                <p>Populari în nord, din grâu, orez sau ou</p>
+                            </div>
+                            <div class="ingredient-item">
+                                <strong>Pâine cu abur (馒头)</strong>
+                                <p>Pâine pufoasă, populară în nordul Chinei</p>
+                            </div>
+                            <div class="ingredient-item">
+                                <strong>Ravioli (饺子)</strong>
+                                <p>Umpluti cu carne sau legume</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ingredient-category">
+                        <h3>🧂 Condimente Esențiale</h3>
+                        <div class="condiments-grid">
+                            <div class="condiment-card">
+                                <div class="condiment-icon">🍶</div>
+                                <h4>Sos de Soia (酱油)</h4>
+                                <p>Condimentele de bază, variante light și dark</p>
+                            </div>
+                            <div class="condiment-card">
+                                <div class="condiment-icon">🌶️</div>
+                                <h4>Pastă de Ardei (豆瓣酱)</h4>
+                                <p>Fermentată, picantă, bază pentru multe preparate</p>
+                            </div>
+                            <div class="condiment-card">
+                                <div class="condiment-icon">🥄</div>
+                                <h4>Sos de Stridii (蚝油)</h4>
+                                <p>Savuros, bogat în umami</p>
+                            </div>
+                            <div class="condiment-card">
+                                <div class="condiment-icon">🍯</div>
+                                <h4>Sos Hoisin (海鲜酱)</h4>
+                                <p>Dulce, aromat, pentru rață și porc</p>
+                            </div>
+                            <div class="condiment-card">
+                                <div class="condiment-icon">🌰</div>
+                                <h4>Ulei de Susan (芝麻油)</h4>
+                                <p>Parfumat, adăugat la final pentru aromă</p>
+                            </div>
+                            <div class="condiment-card">
+                                <div class="condiment-icon">🧄</div>
+                                <h4>Trio Aromatic</h4>
+                                <p>Usturoi, ghimbir, ceapă verde</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ingredient-category">
+                        <h3>🥬 Legume Comune</h3>
+                        <ul class="styled-list two-column">
+                            <li>Bok Choy (白菜) - varză chineză</li>
+                            <li>Ciuperci (香菇) - shiitake, cloud ear</li>
+                            <li>Bambus (竹笋) - lăstari proaspeți sau conservați</li>
+                            <li>Tofu (豆腐) - proaspăt, fiert, fermentat</li>
+                            <li>Fasole lungă (豇豆)</li>
+                            <li>Ridiche albă (白萝卜) - daikon</li>
+                            <li>Spanac chinezesc (菠菜)</li>
+                            <li>Castane de apă (荸荠)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="preparate" class="content-section slide-in-left">
+                <h2 class="section-heading">Preparate Clasice Chinezești</h2>
+                <div class="dishes-showcase">
+                    <div class="dish-card featured">
+                        <div class="dish-image-large">
+                            <img src="https://images.unsplash.com/photo-1583521214690-73421a1829a9?w=700" alt="Rață Peking" class="content-image">
+                        </div>
+                        <div class="dish-details">
+                            <h3>🦆 Rața Peking (北京烤鸭)</h3>
+                            <div class="dish-meta">
+                                <span class="dish-origin">📍 Beijing</span>
+                                <span class="dish-prep">⏱️ 24+ ore pregătire</span>
+                            </div>
+                            <p class="dish-description">
+                                Cel mai faimos preparat din Beijing, cu istorie de peste 600 de ani. Rața este marinată, uscată la aer și coaptă până când pielea devine crocantă și arămie, iar carnea rămâne suculentă.
+                            </p>
+                            <div class="serving-method">
+                                <h4>Mod de servire:</h4>
+                                <p>Feliată în bucăți subțiri, servită cu clătite subțiri, sos de fasole dulce, ceapă verde și castraveți.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card">
+                        <div class="recipe-header">
+                            <h3>🥘 Mapo Tofu (麻婆豆腐)</h3>
+                            <div class="recipe-difficulty">
+                                <span class="difficulty medium">Dificultate: Medie</span>
+                                <span class="prep-time">⏱️ 30 min</span>
+                            </div>
+                        </div>
+                        <div class="recipe-image">
+                            <img src="https://images.unsplash.com/photo-1581781870022-09d37c5e5a5d?w=600" alt="Mapo Tofu" class="content-image">
+                        </div>
+                        <div class="recipe-content">
+                            <h4>Ingrediente:</h4>
+                            <ul class="recipe-ingredients">
+                                <li>400g tofu moale, tăiat cuburi</li>
+                                <li>200g carne tocată de porc</li>
+                                <li>2 linguri pastă de ardei fermentat (doubanjiang)</li>
+                                <li>1 lingură piper Sichuan, măcinat</li>
+                                <li>3 linguri ulei vegetal</li>
+                                <li>2 linguri sos de soia</li>
+                                <li>1 ceașcă supă sau apă</li>
+                                <li>2 căței usturoi, tocați</li>
+                                <li>1 lingură ghimbir, tocat</li>
+                                <li>Ceapă verde pentru garnitură</li>
+                            </ul>
+                            <h4>Mod de preparare:</h4>
+                            <ol class="recipe-steps">
+                                <li>Încinge uleiul în wok la foc mare. Adaugă carnea tocată și sotează până se rumenește.</li>
+                                <li>Adaugă pasta de ardei, usturoiul și ghimbirul. Sotează 1-2 minute până miroase frumos.</li>
+                                <li>Adaugă supa și sosul de soia. Adu la fierbere.</li>
+                                <li>Adaugă cuburile de tofu cu grijă. Lasă să fiarbă 5-7 minute la foc mic.</li>
+                                <li>Presară piper Sichuan măcinat și ceapă verde tocată.</li>
+                                <li>Servește fierbinte cu orez alb fiert.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="dishes-grid">
+                        <div class="dish-compact">
+                            <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=400" alt="Kung Pao Chicken" class="dish-thumb">
+                            <h4>🍗 Kung Pao Chicken</h4>
+                            <p>Pui sotate cu arahide, ardei și legume în sos picant-dulce.</p>
+                        </div>
+                        <div class="dish-compact">
+                            <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=400" alt="Ravioli Chinezești" class="dish-thumb">
+                            <h4>🥟 Jiaozi (Dumplings)</h4>
+                            <p>Ravioli umpluti cu carne și legume, fierti sau prăjiți.</p>
+                        </div>
+                        <div class="dish-compact">
+                            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400" alt="Hot Pot" class="dish-thumb">
+                            <h4>🍲 Hot Pot (火锅)</h4>
+                            <p>Supă fierbinte în care se gătesc carne, fructe de mare și legume.</p>
+                        </div>
+                        <div class="dish-compact">
+                            <img src="https://images.unsplash.com/photo-1612927601601-6638404737ce?w=400" alt="Chow Mein" class="dish-thumb">
+                            <h4>🍜 Chow Mein</h4>
+                            <p>Taitei prăjiți cu legume și carne.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tehnici" class="content-section fade-in">
+                <h2 class="section-heading">Tehnici Culinare Chinezești</h2>
+                <p>
+                    Bucătăria chineză folosește o varietate de tehnici de gătit care păstrează textura, culoarea și valorile nutritive ale ingredientelor.
+                </p>
+
+                <div class="techniques-grid">
+                    <div class="technique-card">
+                        <div class="technique-icon">🔥</div>
+                        <h3>Stir-Frying (炒)</h3>
+                        <p>Sotare rapidă la temperatură foarte înaltă în wok. Cea mai comună tehnică, necesită pregătire prealabilă a tuturor ingredientelor.</p>
+                        <ul class="technique-benefits">
+                            <li>Păstrează textura crocantă</li>
+                            <li>Gătire rapidă (2-5 minute)</li>
+                            <li>Reține vitaminele</li>
+                        </ul>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-icon">💨</div>
+                        <h3>Steaming (蒸)</h3>
+                        <p>Gătit cu abur în coșuri de bambus suprapuse. Metodă sănătoasă care păstrează gustul natural.</p>
+                        <ul class="technique-benefits">
+                            <li>Fără ulei adițional</li>
+                            <li>Nutrienți păstrați</li>
+                            <li>Ideal pentru pește și dim sum</li>
+                        </ul>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-icon">🍯</div>
+                        <h3>Red Braising (红烧)</h3>
+                        <p>Fiert înăbușit în sos de soia cu zahăr, vin de orez și condimente până carnea devine fragedă.</p>
+                        <ul class="technique-benefits">
+                            <li>Culoare roșie-brun caracteristică</li>
+                            <li>Gust bogat, complex</li>
+                            <li>Ideal pentru porc și vită</li>
+                        </ul>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-icon">🔪</div>
+                        <h3>Deep-Frying (炸)</h3>
+                        <p>Prăjire în ulei mult, adesea cu coating de aluăt sau pesmet.</p>
+                        <ul class="technique-benefits">
+                            <li>Textură crocantă</li>
+                            <li>Sigilarea sucurilor</li>
+                            <li>Potrivit pentru pui, pește, legume</li>
+                        </ul>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-icon">🥘</div>
+                        <h3>pot Roasting (焗)</h3>
+                        <p>Gătire lentă în vas acoperit, adesea în cuptor sau pe aragaz.</p>
+                        <ul class="technique-benefits">
+                            <li>Carne extrem de fragedă</li>
+                            <li>Aromezându-se profund</li>
+                            <li>Ideal pentru bucăți mari</li>
+                        </ul>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-icon">🌡️</div>
+                        <h3>Blanching (焯)</h3>
+                        <p>Scufundare scurtă în apă clocotită, apoi în apă rece.</p>
+                        <ul class="technique-benefits">
+                            <li>Păstrează culoarea vibrantă</li>
+                            <li>Elimină impuritățile</li>
+                            <li>Pregătire pentru alte tehnici</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cultura" class="content-section slide-in-right">
+                <h2 class="section-heading">Cultura Mesei și Eticheta</h2>
+                <p>
+                    În cultura chineză, mesele nu sunt doar despre hrană, ci și despre comunitate, respect și tradiție. Eticheta la masă reflectă valorile confucianiste de respect pentru ierarhie și armonie socială.
+                </p>
+
+                <div class="dining-culture">
+                    <div class="culture-aspect">
+                        <h3>🥢 Folosirea Bețișoarelor (筷子)</h3>
+                        <div class="two-column-layout">
+                            <div class="column">
+                                <h4>✅ De făcut:</h4>
+                                <ul class="etiquette-list correct">
+                                    <li>Ține bețișoarele în mâna dominantă</li>
+                                    <li>Plasează-le paralel pe bol când nu le folosești</li>
+                                    <li>Folosește capătul gros pentru a lua din farfurii comune</li>
+                                    <li>Practică pentru a deveni abil</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <h4>❌ De evitat:</h4>
+                                <ul class="etiquette-list incorrect">
+                                    <li>Nu înfige bețișoarele vertical în orez (simbolizează moartea)</li>
+                                    <li>Nu le folosiți ca pe niște săgeți indicatoare</li>
+                                    <li>Nu le lovi una de alta</li>
+                                    <li>Nu le sugi sau le roziși</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="culture-aspect">
+                        <h3>🍽️ Eticheta la Masă</h3>
+                        <ul class="styled-list">
+                            <li><strong>Așezare:</strong> Gazda sau persoana cu cel mai înalt statut se așază primul, de obicei cu fața spre ușă</li>
+                            <li><strong>Servirea:</strong> Asteptă ca gazda să înceapă mâncarea sau să invite oaspeții să mănânce</li>
+                            <li><strong>Sharing:</strong> Preparatele se plasează în centru și toată lumea servește din aceleași farfurii</li>
+                            <li><strong>Toast-uri:</strong> "Ganbei!" (干杯) înseamnă "Golește paharul!" - toast-ul tradițional</li>
+                            <li><strong>Finalizare:</strong> Este politicos să lași puțină mâncare în farfurie (arată că gazda a fost generoasă)</li>
+                            <li><strong>Plată:</strong> În tradiție, gazda sau persoana care a invitat plătește nota</li>
+                        </ul>
+                    </div>
+
+                    <div class="culture-aspect">
+                        <h3>🎉 Alimente Simbolice</h3>
+                        <div class="symbolic-foods">
+                            <div class="symbol-card">
+                                <span class="symbol-emoji">🐟</span>
+                                <h4>Pește (鱼)</h4>
+                                <p><strong>Simbolism:</strong> Abundență și surplus (homofon cu 余 "surplus")</p>
+                                <p>Esențial la Anul Nou Chinezesc</p>
+                            </div>
+                            <div class="symbol-card">
+                                <span class="symbol-emoji">🍜</span>
+                                <h4>Taitei Lungi (长寿面)</h4>
+                                <p><strong>Simbolism:</strong> Longevitate</p>
+                                <p>Serviti la zile de naștere și sărbători</p>
+                            </div>
+                            <div class="symbol-card">
+                                <span class="symbol-emoji">🥟</span>
+                                <h4>Ravioli (饺子)</h4>
+                                <p><strong>Simbolism:</strong> Bogăție (formă de lingouri de aur)</p>
+                                <p>Tradițional la Anul Nou</p>
+                            </div>
+                            <div class="symbol-card">
+                                <span class="symbol-emoji">🍊</span>
+                                <h4>Mandarine (橘子)</h4>
+                                <p><strong>Simbolism:</strong> Noroc și prosperitate</p>
+                                <p>Culoarea aurie aduce noroc</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="culture-aspect">
+                        <h3>☕ Cultura Ceaiului</h3>
+                        <p>
+                            Ceaiul (茶, chá) este parte integrantă a culturii chineze, cu o istorie de peste 4.000 de ani. Ceremonia ceaiului chinezesc (茶道) este o artă rafinta care combină estetică, filozofie și ospitalitate.
+                        </p>
+                        <div class="tea-types">
+                            <span class="tea-type">🍵 Ceai Verde (绿茶)</span>
+                            <span class="tea-type">🌺 Ceai Oolong (乌龙茶)</span>
+                            <span class="tea-type">🔴 Ceai Negru (红茶)</span>
+                            <span class="tea-type">⚪ Ceai Alb (白茶)</span>
+                            <span class="tea-type">🌿 Ceai Pu-erh (普洱茶)</span>
+                            <span class="tea-type">🌼 Ceai Jasmine (茉莉花茶)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-heading">Referințe</h2>
+                <ol class="references-list">
+                    <li>Chang, K.C. (ed.). "Food in Chinese Culture: Anthropological and Historical Perspectives" (1977)</li>
+                    <li>Dunlop, Fuchsia. "The Food of Sichuan" (2019)</li>
+                    <li>Lin, Hsiang Ju & Lin, Tsuifeng. "Chinese Gastronomy" (1969)</li>
+                    <li>Newman, Jacqueline M. "Food Culture in China" (2004)</li>
+                </ol>
+            </section>
+        </main>
     </div>
 
-    <!-- Info Gast Ceai -->
-    <div class="boxDeTextInfoGastSpec" style="transform: translate(1128px , 378px); background: radial-gradient( #f5e9e1 , #e8a172); animation: apari 1.5s ease-out forwards;">
-      <p>Ceaiul are o mare importanță culturală, fiind consumat zilnic și servit la ocazii speciale.</p>
-      <a href="https://www.manutea.ro/ceai-chinezesc-x2v40049?gad_source=1&gad_campaignid=21496694839&gbraid=0AAAAACnw8bom__Q-QgAoGXMsVv9pqZqO7&gclid=Cj0KCQiAiKzIBhCOARIsAKpKLAOl2grGlpsX5RW6FI1JfNkscBafADXHj6JzOnGOGl1bY6sEDI00VtcaAlxVEALw_wcB" target="_blank">
-        <img id="pozaCeai" src="Imagini/ceaiChin.png" title="Ceai">
-      </a>
-    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Despre</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Despre proiect</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resurse</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Politică confidențialitate</a></li>
+                    <li><a href="#">Termeni utilizare</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            AI vibe coded development by <a href="https://biela.dev/" target="_blank" rel="noopener noreferrer">Biela.dev</a>, powered by <a href="https://teachmecode.ae/" target="_blank" rel="noopener noreferrer">TeachMeCode® Institute</a>
+        </div>
+    </footer>
 
-    <!-- Info Gast Sud-->
-    <div class="boxDeTextInfoGast" style="transform: translate(1103px , 710px); background: linear-gradient(to top , #f5e9e1 , #e8a172); animation: dinJos 0.5s ease-out 2.65s forwards;">
-      <p>Sudul – preparate cu orez și fructe de mare</p>
-         <a href="https://www.pastebaneasa.ro/retete/orez-prajit-chinezesc/" target="_blank">
-        <img id="pozaOrez" src="Imagini/orezpraji.png" title="Reteta Orez Prajit">
-      </a>
-      <a href="https://www.kaufland.ro/retete/retete-pentru-toti/categorii/reteta.reteta-fructe-mare-in-sos-tomat.r_id=RO_1407.html" target="_blank">
-        <img id="pozaFrc" src="Imagini/fructeMareChin.png" title="Reteta Salata de Fructe de Mare">
-      </a>
-    </div>
-
-    <!-- Info Gast Vest -->
-    <div class="boxDeTextInfoGast" style="transform: translate(703px , 360px); background: linear-gradient(to right , #f5e9e1 , #e8a172); animation: dinStanga 0.5s ease-out 1.45s forwards;">
-      <p>Vestul (Sichuan) – mâncăruri foarte picante</p>
-      <a href="https://www.gustos.ro/retete-culinare/vinete-picante-in-stil-chinezesc-cu-ardei-iute-si-usturoi-reteta-simpla-aromata-si-absolut-delicioasa.html" target="_blank">
-        <img id="pozaVin" src="Imagini/vinetePic.png" title="Reteta Vinete Picante">
-      </a>
-      <a href="https://chinesefood.ro/retete/hotpot-in-stil-chinezesc/" target="_blank">
-        <img id="pozaSupa" src="Imagini/supaPic.png" title="Reteta Sichuan Hot Pot(Supa Picanta)">
-      </a>
-    </div>
-
-    <!-- Info Gast Est -->
-    <div class="boxDeTextInfoGast" style="right: 0; transform: translate(-703px , 360px); background: linear-gradient(to left , #f5e9e1 , #e8a172); animation: dinDreapta 0.5s ease-out 1.85s forwards;">
-      <p>Estul (Shanghai) – mâncăruri dulci-acrișoare</p>
-      <a href="https://andreeachinesefood.ro/2019/11/costite-de-porc-in-sos-dulce-acrisor/" target="_blank">
-        <img id="pozaPorc" src="Imagini/porcDuAc.png" title="Reteta Porc Dulce Acrisor">
-      </a>
-      <a href="https://divainbucatarie.ro/2020/01/24/pui-chinezesc-cu-sos-de-lamaie/" target="_black">
-        <img id="pozaPui" src="Imagini/puiDuAc.png" title="Reteta Pui chinezesc cu sos de lamaie">
-      </a>
-    </div>
-
-    <!-- Info Gast Rața Peking -->
-    <div class="boxDeTextInfoGastSpec" style="transform: translate(703px , 0px); background-image: radial-gradient(farthest-corner at 0px 0px, #f5e9e1 , #e8a172 ); animation: dinStangaSus 0.5s ease-out 3.05s forwards;">
-      <p>Rața Peking</p>
-      <a href="https://www.lalena.ro/reteta/1576/Rata-Peking-varianta-de-casa/" target="_blank">
-        <img id="pozaRata" src="Imagini/rataChin.png" title="Reteta Rata Peking">
-      </a>
-    </div>
-
-     <!-- Info Gast Pui Kung Pao, -->
-    <div class="boxDeTextInfoGastSpec" style="right: 0; transform: translate(-703px , 0px); background-image: radial-gradient(farthest-corner at 300px 0px, #f5e9e1 , #e8a172 ); animation: dinDreaptaSus 0.5s ease-out 3.45s forwards;">
-      <p>Pui Kung Pao</p>
-      <a href="https://dragonfood.ro/2020/07/19/kung-pao-chicken/" title="_black">
-        <img id="pozaPui2" src="Imagini/puiKunPao.png" title="Reteta Pui Kung Pao">
-      </a>
-    </div>
-
-     <!-- Info Gast Mapo Tofu -->
-    <div class="boxDeTextInfoGastSpec" style="bottom: 0; transform: translate(703px , -5px); background-image: radial-gradient(farthest-corner at 0px 300px, #f5e9e1 , #e8a172 ); animation: dinStangaJos 0.5s ease-out 3.85s forwards;">
-      <p>Mapo Tofu</p>
-      <a href="https://gourmandelle.com/ro/mapo-tofu/" target="_blank">
-        <img id="pozaTofu" src="Imagini/mapotofu.png" title="Reteta Mapo Tofu">
-      </a>
-    </div>
-
-     <!-- Info Gast Spring rolls -->
-    <div class="boxDeTextInfoGastSpec" style="bottom: 0; right: 0; transform: translate(-703px , -5px); background-image: radial-gradient(farthest-corner at 300px 300px, #f5e9e1 , #e8a172 ); animation: dinDreaptaJos 0.5s ease-out 4.25s forwards;">
-      <p>Spring rolls (pachețele de primăvară)</p>
-      <a href="https://jamilacuisine.ro/spring-rolls-pachetele-de-primavara-reteta-video/" target="_blank">
-        <img id="pozaRol" src="Imagini/springrolsChin.png" title="Reteta Spring Rolls(pachetele de primavara)">
-      </a>
-    </div>
-
-  </div>
-  <button onclick="location.href='index.html'">⏪ Înapoi</button>
+    <script src="script.js"></script>
 </body>
 </html>

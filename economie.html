@@ -1,55 +1,424 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <title>Economia Chinei</title>
-  <link rel="stylesheet" href="stil.css">
-  <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Economia Chinei: PIB, comerț internațional, structură economică, companii majore și politici economice.">
+    <title>Economia Chinei - Encyclopedia China</title>
+    <link rel="canonical" href="https://example.com/economie.html">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <h1>💹 Economia Chinei</h1>
-  </header>
+    <header class="header-fixed">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo">
+                    <span class="logo-icon">��️</span>
+                    <span class="logo-text">Encyclopedia China</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Acasă</a>
+                <a href="istorie.html" class="nav-link">Istorie</a>
+                <a href="cultura.html" class="nav-link">Cultură</a>
+                <a href="geografie.html" class="nav-link">Geografie</a>
+                <a href="economie.html" class="nav-link active">Economie</a>
+                <a href="gastronomie.html" class="nav-link">Gastronomie</a>
+            </nav>
+            <div class="header-right">
+                <div class="search-container">
+                    <input type="search" class="search-input" id="globalSearch" placeholder="Caută..." autocomplete="off">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+                <select class="language-selector" id="langSelector">
+                    <option value="ro">🇷🇴 Română</option>
+                    <option value="en">🇬🇧 English</option>
+                </select>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <div id="boxDeTextEcoGeneral">
-    <p>China are una dintre cele mai mari economii din lume — fiind considerată „fabrica planetei”.După reformele economice începute în anii 1980, China a trecut de la o economie planificată la una de piață, cu o dezvoltare spectaculoasă.</p>
-  </div>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-sticky">
+                <div class="infobox">
+                    <h3 class="infobox-title">Economia Chinei</h3>
+                    <div class="infobox-image">
+                        <img src="https://images.unsplash.com/photo-1589758438368-0ad531db3366?w=400" alt="Shanghai Business District">
+                    </div>
+                    <table class="infobox-table">
+                        <tr>
+                            <td class="info-label">PIB Nominal</td>
+                            <td class="info-value">$17,9 trilioane</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">PIB per capita</td>
+                            <td class="info-value">$12.720</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Creștere PIB</td>
+                            <td class="info-value">5,2% (2023)</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Inflație</td>
+                            <td class="info-value">2,0%</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Șomaj</td>
+                            <td class="info-value">5,1%</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Monedă</td>
+                            <td class="info-value">Renminbi (元)</td>
+                        </tr>
+                    </table>
+                </div>
+                <nav class="toc">
+                    <h3 class="toc-title">Cuprins</h3>
+                    <ul class="toc-list">
+                        <li><a href="#prezentare">Prezentare Generală</a></li>
+                        <li><a href="#indicatori">Indicatori Macroeconomici</a></li>
+                        <li><a href="#structura">Structura Economiei</a></li>
+                        <li><a href="#comert">Comerț Exterior</a></li>
+                        <li><a href="#companii">Companii Majore</a></li>
+                        <li><a href="#politici">Politici Economice</a></li>
+                    </ul>
+                </nav>
+                <div class="quick-links">
+                    <h3 class="quick-links-title">Linkuri Rapide</h3>
+                    <ul class="quick-links-list">
+                        <li><a href="#" class="quick-link" id="printPage">📄 Versiune tipărire</a></li>
+                        <li><a href="#" class="quick-link" id="permalink">🔗 Permalink</a></li>
+                        <li><a href="#" class="quick-link" id="citeThis">📚 Citează pagina</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
 
-  <div id="boxDeTextEco">
+        <main class="content-main">
+            <nav class="breadcrumbs">
+                <a href="index.html">Acasă</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Economie</span>
+            </nav>
 
-    <!-- Info Eco Industrie -->
-    <div class="boxDeTextInfoEco" style="transform: translate(200px , 350px); background: linear-gradient(to right , #f7efba , #0fdb49); animation: venireDinStanga 2s ease-out forwards;">
-      <p>Este lider mondial în producție industrială, tehnologie, energie verde și exporturi.</p>
-      <a href="https://ro.wikipedia.org/wiki/Energie_regenerabil%C4%83" target="_blank">
-        <img id="pozaVerde" src="Imagini/EnVerdChin.png" title="Energie Verde">
-      </a>
-      <a href="https://romanian.cri.cn/ChineseBaike/more/4400/20201223/595804.html" target="_blank">
-        <img id="pozaIndustrie" src="Imagini/IndChin.png" title="Industria Chinezeasca">
-      </a>
+            <div class="page-header">
+                <h1 class="page-title">Economia Chinei</h1>
+                <p class="page-subtitle">A doua cea mai mare economie din lume</p>
+            </div>
+
+            <section id="prezentare" class="content-section fade-in">
+                <p class="lead-paragraph">
+                    <strong>Economia Chinei</strong> este a doua cea mai mare din lume după PIB nominal și cea mai mare după paritatea puterii de cumpărare. În ultimele patru decenii, China a experimentat o creștere economică extraordinară, transformându-se dintr-o economie centralizată într-o economie socialistă de piață.<sup class="reference">[1]</sup>
+                </p>
+                <p>
+                    Reformele economice inițiate de Deng Xiaoping în 1978 au marcat un punct de cotitură crucial. China s-a deschis către investițiile străine, a privatizat parțial întreprinderile de stat și a devenit "fabrica lumii". Astăzi, economia chineză este diversificată, cu sectoare puternice în producție, tehnologie, servicii și finanțe.
+                </p>
+            </section>
+
+            <section id="indicatori" class="content-section slide-in-left">
+                <h2 class="section-heading">Indicatori Macroeconomici</h2>
+                <div class="economic-stats">
+                    <div class="stats-grid">
+                        <div class="stat-card economic">
+                            <div class="stat-icon">💰</div>
+                            <div class="stat-value">$17,9T</div>
+                            <div class="stat-label">PIB Nominal (2023)</div>
+                            <div class="stat-change positive">+5,2% față de 2022</div>
+                        </div>
+                        <div class="stat-card economic">
+                            <div class="stat-icon">📊</div>
+                            <div class="stat-value">$30,3T</div>
+                            <div class="stat-label">PIB (PPP)</div>
+                            <div class="stat-change">Cel mai mare din lume</div>
+                        </div>
+                        <div class="stat-card economic">
+                            <div class="stat-icon">🏭</div>
+                            <div class="stat-value">28,4%</div>
+                            <div class="stat-label">Industrie (% din PIB)</div>
+                            <div class="stat-change">Producție globală</div>
+                        </div>
+                        <div class="stat-card economic">
+                            <div class="stat-icon">🌐</div>
+                            <div class="stat-value">$3,4T</div>
+                            <div class="stat-label">Export Anual</div>
+                            <div class="stat-change">#1 Exportator global</div>
+                        </div>
+                        <div class="stat-card economic">
+                            <div class="stat-icon">💹</div>
+                            <div class="stat-value">$3,2T</div>
+                            <div class="stat-label">Rezerve Valutare</div>
+                            <div class="stat-change">Cele mai mari din lume</div>
+                        </div>
+                        <div class="stat-card economic">
+                            <div class="stat-icon">👔</div>
+                            <div class="stat-value">780M</div>
+                            <div class="stat-label">Forță de Muncă</div>
+                            <div class="stat-change">Cea mai mare din lume</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Evoluția PIB-ului Chinei (2000-2023)</h3>
+                    <svg viewBox="0 0 800 400" class="economic-chart">
+                        <defs>
+                            <linearGradient id="gdpGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3" />
+                                <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0" />
+                            </linearGradient>
+                        </defs>
+                        <polyline fill="url(#gdpGradient)" stroke="#3b82f6" stroke-width="3" 
+                                  points="50,350 100,340 150,320 200,300 250,270 300,240 350,210 400,180 450,150 500,130 550,110 600,90 650,70 700,50 750,40"/>
+                        <line x1="50" y1="350" x2="750" y2="350" stroke="#94a3b8" stroke-width="2"/>
+                        <line x1="50" y1="50" x2="50" y2="350" stroke="#94a3b8" stroke-width="2"/>
+                        <text x="400" y="390" text-anchor="middle" fill="#475569" font-size="14">Anul</text>
+                        <text x="20" y="200" text-anchor="middle" fill="#475569" font-size="14" transform="rotate(-90 20 200)">PIB (trilioane USD)</text>
+                        <text x="50" y="370" text-anchor="middle" fill="#64748b" font-size="12">2000</text>
+                        <text x="400" y="370" text-anchor="middle" fill="#64748b" font-size="12">2012</text>
+                        <text x="750" y="370" text-anchor="middle" fill="#64748b" font-size="12">2023</text>
+                        <text x="750" y="35" text-anchor="end" fill="#1e40af" font-size="16" font-weight="bold">$17,9T</text>
+                    </svg>
+                </div>
+            </section>
+
+            <section id="structura" class="content-section fade-in">
+                <h2 class="section-heading">Structura Economiei</h2>
+                <p>
+                    Economia chineză este diversificată în trei sectoare principale: agricultură, industrie și servicii. În ultimele decenii, serviciile au crescut semnificativ, reflectând tranziția către o economie mai avansată.<sup class="reference">[2]</sup>
+                </p>
+                <div class="sector-breakdown">
+                    <div class="sector-card">
+                        <div class="sector-header agriculture">
+                            <span class="sector-icon">🌾</span>
+                            <h3>Agricultură</h3>
+                        </div>
+                        <div class="sector-percentage">7,3% din PIB</div>
+                        <ul class="sector-details">
+                            <li>Cel mai mare producător de orez din lume</li>
+                            <li>Producție majoră de grâu, porumb, soia</li>
+                            <li>Creșterea porcilor (50% din producția mondială)</li>
+                            <li>Acvacultură extinsă</li>
+                        </ul>
+                    </div>
+                    <div class="sector-card">
+                        <div class="sector-header industry">
+                            <span class="sector-icon">🏭</span>
+                            <h3>Industrie</h3>
+                        </div>
+                        <div class="sector-percentage">39,9% din PIB</div>
+                        <ul class="sector-details">
+                            <li>Producție: electronică, auto, textile</li>
+                            <li>Construcții și infrastructură</li>
+                            <li>Minerit și extracție resurse</li>
+                            <li>Energie și utilități</li>
+                        </ul>
+                    </div>
+                    <div class="sector-card">
+                        <div class="sector-header services">
+                            <span class="sector-icon">💼</span>
+                            <h3>Servicii</h3>
+                        </div>
+                        <div class="sector-percentage">52,8% din PIB</div>
+                        <ul class="sector-details">
+                            <li>E-commerce și tehnologie</li>
+                            <li>Servicii financiare și bancare</li>
+                            <li>Turism și ospitalitate</li>
+                            <li>Telecomunicații și IT</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="comert" class="content-section slide-in-right">
+                <h2 class="section-heading">Comerț Exterior</h2>
+                <p>
+                    China este cel mai mare exportator și al doilea cel mai mare importator din lume. Balanța comercială a Chinei este pozitivă, cu exporturi care depășesc semnificativ importurile.<sup class="reference">[3]</sup>
+                </p>
+                <div class="trade-stats">
+                    <div class="trade-column">
+                        <h3>🚢 Exporturi Principale</h3>
+                        <div class="trade-item">
+                            <span class="trade-product">Electronică & Echipamente</span>
+                            <span class="trade-value">28%</span>
+                        </div>
+                        <div class="trade-item">
+                            <span class="trade-product">Mașini & Echipamente</span>
+                            <span class="trade-value">22%</span>
+                        </div>
+                        <div class="trade-item">
+                            <span class="trade-product">Textile & Îmbrăcăminte</span>
+                            <span class="trade-value">12%</span>
+                        </div>
+                        <div class="trade-item">
+                            <span class="trade-product">Produse Chimice</span>
+                            <span class="trade-value">10%</span>
+                        </div>
+                        <div class="trade-item">
+                            <span class="trade-product">Metale & Produse Metalice</span>
+                            <span class="trade-value">8%</span>
+                        </div>
+                    </div>
+                    <div class="trade-column">
+                        <h3>📦 Importuri Principale</h3>
+                        <div class="trade-item">
+                            <span class="trade-product">Electronică & Semiconductori</span>
+                            <span class="trade-value">25%</span>
+                        </div>
+                        <div class="trade-item">
+                            <span class="trade-product">Petrol & Gaz Natural</span>
+                            <span class="trade-value">18%</span>
+                        </div>
+                        <div class="trade-item">
+                            <span class="trade-product">Minerale & Metale</span>
+                            <span class="trade-value">15%</span>
+                        </div>
+                        <div class="trade-item">
+                            <span class="trade-product">Mașini & Echipamente</span>
+                            <span class="trade-value">12%</span>
+                        </div>
+                        <div class="trade-item">
+                            <span class="trade-product">Produse Agricole</span>
+                            <span class="trade-value">10%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trade-partners">
+                    <h3>Principali Parteneri Comerciali</h3>
+                    <div class="partners-grid">
+                        <div class="partner-item">🇺🇸 SUA - $690 miliarde</div>
+                        <div class="partner-item">🇪🇺 UE - $847 miliarde</div>
+                        <div class="partner-item">🇯🇵 Japonia - $357 miliarde</div>
+                        <div class="partner-item">🇰🇷 Coreea de Sud - $362 miliarde</div>
+                        <div class="partner-item">🇻🇳 Vietnam - $292 miliarde</div>
+                        <div class="partner-item">🇦🇺 Australia - $238 miliarde</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="companii" class="content-section fade-in">
+                <h2 class="section-heading">Companii Majore</h2>
+                <p>
+                    China găzduiește unele dintre cele mai mari și mai valoroase companii din lume, acoperind sectoare de la tehnologie și e-commerce până la energie și finanțe.
+                </p>
+                <div class="companies-grid">
+                    <div class="company-card">
+                        <div class="company-logo">🔋</div>
+                        <h3>State Grid Corporation</h3>
+                        <p class="company-sector">Energie & Utilități</p>
+                        <p class="company-revenue">Venituri: $530 miliarde</p>
+                        <p class="company-desc">Cea mai mare companie de utilități din lume, operând rețeaua electrică a Chinei.</p>
+                    </div>
+                    <div class="company-card">
+                        <div class="company-logo">📱</div>
+                        <h3>Alibaba Group</h3>
+                        <p class="company-sector">E-commerce & Cloud</p>
+                        <p class="company-revenue">Venituri: $131 miliarde</p>
+                        <p class="company-desc">Giant al comerțului electronic, operând Taobao, Tmall și Alibaba Cloud.</p>
+                    </div>
+                    <div class="company-card">
+                        <div class="company-logo">💬</div>
+                        <h3>Tencent</h3>
+                        <p class="company-sector">Tehnologie & Gaming</p>
+                        <p class="company-revenue">Venituri: $87 miliarde</p>
+                        <p class="company-desc">Dezvoltatorul WeChat, lider în gaming, social media și fintech.</p>
+                    </div>
+                    <div class="company-card">
+                        <div class="company-logo">🛢️</div>
+                        <h3>Sinopec</h3>
+                        <p class="company-sector">Petrol & Gaz</p>
+                        <p class="company-revenue">Venituri: $471 miliarde</p>
+                        <p class="company-desc">Una dintre cele mai mari companii petroliere și chimice din lume.</p>
+                    </div>
+                    <div class="company-card">
+                        <div class="company-logo">🏦</div>
+                        <h3>ICBC</h3>
+                        <p class="company-sector">Bancar & Financiar</p>
+                        <p class="company-revenue">Active: $5,7 trilioane</p>
+                        <p class="company-desc">Industrial and Commercial Bank of China, cea mai mare bancă din lume după active.</p>
+                    </div>
+                    <div class="company-card">
+                        <div class="company-logo">📦</div>
+                        <h3>Huawei</h3>
+                        <p class="company-sector">Telecomunicații</p>
+                        <p class="company-revenue">Venituri: $99 miliarde</p>
+                        <p class="company-desc">Lider global în echipamente de telecomunicații și smartphone-uri.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="politici" class="content-section slide-in-left">
+                <h2 class="section-heading">Politici Economice</h2>
+                <div class="two-column-layout">
+                    <div class="column">
+                        <h3>Belt and Road Initiative (BRI)</h3>
+                        <p>
+                            Inițiativa Centura și Drumul este o strategie de dezvoltare globală adoptată de guvernul chinez, implicând dezvoltarea infrastructurii și investiții în aproape 70 de țări și organizații internaționale.
+                        </p>
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600" alt="Infrastructure" class="content-image">
+                            <p class="image-caption">Proiecte de infrastructură ale BRI</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3>Made in China 2025</h3>
+                        <p>
+                            Plan strategic de zece ani pentru a transforma China într-o putere manufacturieră globală, concentrându-se pe tehnologii avansate precum robotică, inteligență artificială și vehicule electrice.
+                        </p>
+                        <div class="policy-highlights">
+                            <h4>Sectoare Prioritare:</h4>
+                            <ul class="styled-list">
+                                <li>🤖 Robotică și automatizare</li>
+                                <li>🚗 Vehicule cu energie nouă</li>
+                                <li>💻 Semiconductori și IT</li>
+                                <li>✈️ Echipamente aerospațiale</li>
+                                <li>⚙️ Mașini-unelte CNC</li>
+                                <li>🏥 Dispozitive medicale</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-heading">Referințe</h2>
+                <ol class="references-list">
+                    <li>World Bank (2023). "China Economic Update"</li>
+                    <li>National Bureau of Statistics of China. "Statistical Communiqué 2023"</li>
+                    <li>General Administration of Customs. "China Trade Statistics 2023"</li>
+                    <li>Fortune Global 500 (2023). "Chinese Companies Rankings"</li>
+                </ol>
+            </section>
+        </main>
     </div>
 
-    <!-- Info Eco Orase -->
-    <div class="boxDeTextInfoEco" style="transform: translate(1075px , 250px); background: linear-gradient(to right , #f7efba , #0fdb49 , #f7efba); animation: venireDinStanga 2s ease-out 2s forwards;">
-      <p>Orașe precum Shanghai, Beijing, Shenzhen și Guangzhou sunt centre economice globale.</p>
-      <a href="https://en.wikipedia.org/wiki/Shanghai" target="_blank">
-        <img id="pozaShang" src="Imagini/ShnagHaipro.png" title="ShangHai">
-      </a>
-      <a href="https://ro.wikipedia.org/wiki/Beijing" target="_blank">
-        <img id="pozaBeijing" src="Imagini/BeijingPro.png" title="Beijing">
-      </a>
-    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Despre</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Despre proiect</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resurse</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Politică confidențialitate</a></li>
+                    <li><a href="#">Termeni utilizare</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            AI vibe coded development by <a href="https://biela.dev/" target="_blank" rel="noopener noreferrer">Biela.dev</a>, powered by <a href="https://teachmecode.ae/" target="_blank" rel="noopener noreferrer">TeachMeCode® Institute</a>
+        </div>
+    </footer>
 
-    <!-- Info Eco fabrici unde muncesc copiii -->
-    <div class="boxDeTextInfoEco" style="right: 0;transform: translate(-200px , 150px); background: linear-gradient(to left , #f7efba , #0fdb49); animation: venireDinStanga 2s ease-out 4s forwards;">
-      <p>China produce de la telefoane și mașini până la îmbrăcăminte, jucării și echipamente medicale.</p>
-      <img id="pozaHaine" src="Imagini/fabricaTemu.png" title="Fabrica de haine">
-      <img id="pozaMasini" src="Imagini/Fabricamasini.png" title="Fabrica de masini">
-    </div>
-  </div>
-
-  <button onclick="location.href='index.html'">⏪ Înapoi</button>
+    <script src="script.js"></script>
 </body>
-
 </html>

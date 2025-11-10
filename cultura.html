@@ -1,68 +1,351 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <title>Cultura Chinei</title>
-  <link rel="stylesheet" href="stil.css">
-  <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explorează cultura bogată a Chinei: limbi, religii, sărbători, arte, muzică, cinema și tradiții.">
+    <title>Cultura Chineză - Encyclopedia China</title>
+    <link rel="canonical" href="https://example.com/cultura.html">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>🎎 Cultura Chinei</h1>
-  </header>
+    <header class="header-fixed">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo">
+                    <span class="logo-icon">��️</span>
+                    <span class="logo-text">Encyclopedia China</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Acasă</a>
+                <a href="istorie.html" class="nav-link">Istorie</a>
+                <a href="cultura.html" class="nav-link active">Cultură</a>
+                <a href="geografie.html" class="nav-link">Geografie</a>
+                <a href="economie.html" class="nav-link">Economie</a>
+                <a href="gastronomie.html" class="nav-link">Gastronomie</a>
+            </nav>
+            <div class="header-right">
+                <div class="search-container">
+                    <input type="search" class="search-input" id="globalSearch" placeholder="Caută..." autocomplete="off">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+                <select class="language-selector" id="langSelector">
+                    <option value="ro">🇷🇴 Română</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="zh">🇨🇳 中文</option>
+                </select>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <div id="boxDeTextCultGeneral">
-    <p>Cultura chineză este una dintre cele mai bogate și complexe din lume. Ea pune accent pe familie, respect, armonie și educație.</p>
-  </div>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-sticky">
+                <div class="infobox">
+                    <h3 class="infobox-title">Cultura Chineză</h3>
+                    <div class="infobox-image">
+                        <img src="https://images.unsplash.com/photo-1516726817505-f5ed825624d8?w=400" alt="Templu chinezesc">
+                    </div>
+                    <table class="infobox-table">
+                        <tr>
+                            <td class="info-label">Limbi oficiale</td>
+                            <td class="info-value">Mandarin standard</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Scriere</td>
+                            <td class="info-value">Caractere chineze</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Religii principale</td>
+                            <td class="info-value">Budism, Taoism, Confucianism</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">UNESCO</td>
+                            <td class="info-value">56 situri patrimoniu</td>
+                        </tr>
+                    </table>
+                </div>
+                <nav class="toc">
+                    <h3 class="toc-title">Cuprins</h3>
+                    <ul class="toc-list" id="tocList">
+                        <li><a href="#limbi">Limbi și Dialecte</a></li>
+                        <li><a href="#religii">Religii și Credințe</a></li>
+                        <li><a href="#sarbatori">Sărbători Tradiționale</a></li>
+                        <li><a href="#arte">Arte și Artizanat</a></li>
+                        <li><a href="#muzica">Muzică și Dans</a></li>
+                        <li><a href="#cinema">Cinema și Teatru</a></li>
+                        <li><a href="#educatie">Educație</a></li>
+                    </ul>
+                </nav>
+                <div class="quick-links">
+                    <h3 class="quick-links-title">Linkuri Rapide</h3>
+                    <ul class="quick-links-list">
+                        <li><a href="#" class="quick-link" id="printPage">📄 Versiune tipărire</a></li>
+                        <li><a href="#" class="quick-link" id="permalink">🔗 Permalink</a></li>
+                        <li><a href="#" class="quick-link" id="citeThis">📚 Citează pagina</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
 
-  <div id="boxDeTextCult">
+        <main class="content-main">
+            <nav class="breadcrumbs">
+                <a href="index.html">Acasă</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Cultură</span>
+            </nav>
 
-    <!-- Info Cultura Relegie + Filosofie -->
-    <div class="boxDeTextInfoCult" style="transform: translate(200px , 50px); background: linear-gradient(to right , #1ac8eb , white); animation: vin-oDinStanga 1.5s ease-out forwards;"> 
-      <p>Religie și filozofie: Confucianismul, taoismul și budismul au influențat profund gândirea și comportamentul chinezilor.</p>
-      <a href="https://ro.wikipedia.org/wiki/Confucianism" target="_blank">
-        <img id="pozaConfucius" src="Imagini/Conf.png" title="Confucianismul">
-      </a>
-      <a href="https://ro.wikipedia.org/wiki/Budism" target="_blank">
-        <img id="pozaBudism" src="Imagini/budism.png" title="Budismul">
-      </a>
+            <div class="page-header">
+                <h1 class="page-title">Cultura Chineză</h1>
+                <p class="page-subtitle">O civilizație milenară cu tradiții bogate și diverse</p>
+            </div>
+
+            <section id="limbi" class="content-section fade-in">
+                <h2 class="section-heading">Limbi și Dialecte</h2>
+                <p class="lead-paragraph">
+                    <strong>Mandarinul standard</strong> (普通话, Pǔtōnghuà) este limba oficială a Chinei, vorbită de aproximativ 70% din populație. China are o diversitate lingvistică remarcabilă, cu peste 300 de limbi vii aparținând familiei sino-tibetane.<sup class="reference">[1]</sup>
+                </p>
+                <div class="two-column-layout">
+                    <div class="column">
+                        <h3>Principalele Grupe Dialectale</h3>
+                        <ul class="styled-list">
+                            <li><strong>Mandarin</strong> - nord și sud-vest</li>
+                            <li><strong>Wu</strong> (吴语) - Shanghai, Zhejiang</li>
+                            <li><strong>Yue (Cantonez)</strong> - Guangdong, Hong Kong</li>
+                            <li><strong>Min</strong> - Fujian, Taiwan</li>
+                            <li><strong>Hakka</strong> - dispersat în sud</li>
+                            <li><strong>Xiang</strong> - Hunan</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <div class="info-box-inline">
+                            <h4>Sistemul de Scriere</h4>
+                            <p>Limba chineză folosește <strong>caractere chineze</strong> (汉字, hànzì), un sistem logografic cu peste 50.000 de caractere. În uz modern, aproximativ 3.000-4.000 de caractere sunt suficiente pentru alfabetizare funcțională.</p>
+                            <p><strong>Pinyin</strong> este sistemul oficial de romanizare folosit pentru pronunție.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="religii" class="content-section slide-in-right">
+                <h2 class="section-heading">Religii și Credințe</h2>
+                <p>
+                    China are un peisaj religios complex, caracterizat prin sincretism și coexistența mai multor tradiții. Cele trei învățături principale - <strong>Confucianismul</strong>, <strong>Taoismul</strong> și <strong>Budismul</strong> - au modelat cultura chineză timp de milenii.<sup class="reference">[2]</sup>
+                </p>
+                <div class="religion-grid">
+                    <div class="religion-card">
+                        <div class="religion-icon">☯️</div>
+                        <h3>Taoism</h3>
+                        <p>Filozofie indigenă chineză centrată pe <em>Dao</em> (Calea) și armonia cu natura. Fondată de Laozi.</p>
+                    </div>
+                    <div class="religion-card">
+                        <div class="religion-icon">📖</div>
+                        <h3>Confucianism</h3>
+                        <p>Sistem etic și filozofic care subliniază respectul, educația și relațiile sociale armonioase.</p>
+                    </div>
+                    <div class="religion-card">
+                        <div class="religion-icon">🙏</div>
+                        <h3>Budism</h3>
+                        <p>Introdus din India în secolul 1 d.Hr., budismul s-a adaptat culturii chineze, dezvoltând școli unice.</p>
+                    </div>
+                    <div class="religion-card">
+                        <div class="religion-icon">🕌</div>
+                        <h3>Islam</h3>
+                        <p>Practicat de minoritatea Hui și Uigur, cu peste 20 de milioane de adepți în China.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sarbatori" class="content-section fade-in">
+                <h2 class="section-heading">Sărbători Tradiționale</h2>
+                <div class="festivals-timeline">
+                    <div class="festival-item">
+                        <div class="festival-month">Ian-Feb</div>
+                        <div class="festival-content">
+                            <h3>🏮 Anul Nou Chinezesc (春节)</h3>
+                            <p>Cea mai importantă sărbătoare chineză, marcând începutul anului lunar. Familiile se reunesc pentru cina de Revelion, se dau plicuri roșii cu bani, și sunt organizate parade cu dragoni.</p>
+                        </div>
+                    </div>
+                    <div class="festival-item">
+                        <div class="festival-month">Februarie</div>
+                        <div class="festival-content">
+                            <h3>🏮 Festivalul Lanternelor</h3>
+                            <p>Marchează sfârșitul sărbătorilor Anului Nou. Oamenii aprind lanterne colorate, rezolvă ghicitori și mănâncă tang yuan (bile de orez glutinos).</p>
+                        </div>
+                    </div>
+                    <div class="festival-item">
+                        <div class="festival-month">Aprilie</div>
+                        <div class="festival-content">
+                            <h3>🌸 Qingming (清明节)</h3>
+                            <p>Festivalul Curățării Mormintelor, când familiile vizitează mormintele strămoșilor pentru a le curăța și a oferi respecte.</p>
+                        </div>
+                    </div>
+                    <div class="festival-item">
+                        <div class="festival-month">Iunie</div>
+                        <div class="festival-content">
+                            <h3>🐉 Festivalul Bărcilor Dragon</h3>
+                            <p>Comemorează poetul Qu Yuan prin curse de bărci dragon și consumul de zongzi (orez în frunze de bambus).</p>
+                        </div>
+                    </div>
+                    <div class="festival-item">
+                        <div class="festival-month">Septembrie</div>
+                        <div class="festival-content">
+                            <h3>🌕 Festivalul de Mijloc de Toamnă</h3>
+                            <p>Sărbătoarea recoltei și a reuniunii familiale, celebrată cu prăjituri lunare (mooncakes) și contemplarea lunii pline.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1519987684413-da2c6d5a8d04?w=800" alt="Lanterne chinezești" class="content-image">
+                    <p class="image-caption">Lanterne tradiționale chinezești în timpul festivalului</p>
+                </div>
+            </section>
+
+            <section id="arte" class="content-section slide-in-left">
+                <h2 class="section-heading">Arte și Artizanat</h2>
+                <p>
+                    Artele chineze tradiționale reflectă filozofia, istoria și valorile culturale ale civilizației chineze. De la caligrafia elegantă la porțelanul delicat, fiecare formă de artă poartă semnificații profunde.<sup class="reference">[3]</sup>
+                </p>
+                <div class="arts-grid">
+                    <div class="art-card">
+                        <img src="https://images.unsplash.com/photo-1606913084603-3e7702b01627?w=400" alt="Caligrafie chineză" class="art-image">
+                        <h3>✍️ Caligrafie</h3>
+                        <p>Arta scrisului frumos cu pensulă și cerneală, considerată cea mai înaltă formă de artă vizuală în cultura chineză.</p>
+                    </div>
+                    <div class="art-card">
+                        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=400" alt="Pictură chineză" class="art-image">
+                        <h3>🎨 Pictură cu Cerneală</h3>
+                        <p>Pictură tradițională pe mătase sau hârtie folosind cerneală neagră și culori, reprezentând peisaje, flori și păsări.</p>
+                    </div>
+                    <div class="art-card">
+                        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=400" alt="Porțelan chinezesc" class="art-image">
+                        <h3>🏺 Porțelan</h3>
+                        <p>China este renumită pentru porțelanul fin, cu tehnici perfecționate în timpul dinastiilor Tang și Song.</p>
+                    </div>
+                    <div class="art-card">
+                        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400" alt="Artă chineză" class="art-image">
+                        <h3>🪡 Broderie</h3>
+                        <p>Broderia chineză folosește fire de mătase pe mătase sau satin, creând imagini complexe și vibrante.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="muzica" class="content-section fade-in">
+                <h2 class="section-heading">Muzică și Dans</h2>
+                <div class="two-column-layout">
+                    <div class="column">
+                        <h3>Muzică Tradițională</h3>
+                        <p>
+                            Muzica chineză tradițională are o istorie de peste 3.000 de ani. Instrumentele clasice includ <strong>guzheng</strong> (citară cu 21 de corzi), <strong>pipa</strong> (lăută), <strong>erhu</strong> (vioară cu două corzi) și <strong>dizi</strong> (flaut din bambus).
+                        </p>
+                        <div class="info-box-inline">
+                            <h4>Instrumente Tradiționale</h4>
+                            <ul class="styled-list">
+                                <li>🎵 Guzheng - citară cu coarde</li>
+                                <li>🎵 Erhu - vioară cu 2 corzi</li>
+                                <li>🎵 Pipa - lăută chineză</li>
+                                <li>🎵 Dizi - flaut din bambus</li>
+                                <li>🎵 Yangqin - dulcimer chinezesc</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3>Dans și Performanțe</h3>
+                        <p>
+                            <strong>Opera Beijing</strong> (京剧) combină muzică, cântec vocal, pantomimă, dans și acrobatică într-o formă dramatică unică. Alte forme includ dansul leului, dansul dragonului și operele regionale.
+                        </p>
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=500" alt="Opera Beijing" class="content-image">
+                            <p class="image-caption">Performer de Operă Beijing în costum tradițional</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cinema" class="content-section slide-in-right">
+                <h2 class="section-heading">Cinema și Teatru</h2>
+                <p>
+                    Cinematografia chineză are o istorie bogată care datează din 1905. În ultimele decenii, China a devenit al doilea cel mai mare piață de film din lume, iar regizorii chinezi sunt recunoscuți internațional.<sup class="reference">[4]</sup>
+                </p>
+                <div class="cinema-highlights">
+                    <h3>Regizori Remarcabili</h3>
+                    <ul class="styled-list">
+                        <li><strong>Zhang Yimou</strong> - "Raise the Red Lantern", "Hero", "House of Flying Daggers"</li>
+                        <li><strong>Wong Kar-wai</strong> - "In the Mood for Love", "Chungking Express"</li>
+                        <li><strong>Ang Lee</strong> - "Crouching Tiger, Hidden Dragon"</li>
+                        <li><strong>Chen Kaige</strong> - "Farewell My Concubine"</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="educatie" class="content-section fade-in">
+                <h2 class="section-heading">Educație și Valori</h2>
+                <p>
+                    Educația este extrem de valorificată în cultura chineză, cu rădăcini în tradițiile confucianiste. Sistemul educațional chinez este cunoscut pentru standardele sale ridicate și competitivitatea sa intensă.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-value">99,8%</div>
+                        <div class="stat-label">Rata Alfabetizării</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎓</div>
+                        <div class="stat-value">3.000+</div>
+                        <div class="stat-label">Universități</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-value">#1</div>
+                        <div class="stat-label">PISA Matematică</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👨‍🎓</div>
+                        <div class="stat-value">44M</div>
+                        <div class="stat-label">Studenți Universitari</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-heading">Referințe</h2>
+                <ol class="references-list">
+                    <li>Ministry of Education of China. "Languages of China Report 2023"</li>
+                    <li>Chinese Academy of Social Sciences. "Religious Diversity in Modern China"</li>
+                    <li>National Museum of China. "Traditional Chinese Arts and Crafts"</li>
+                    <li>China Film Archive. "History of Chinese Cinema"</li>
+                </ol>
+            </section>
+        </main>
     </div>
 
-      
-    <!-- Info Cultura Arta -->
-    <div class="boxDeTextInfoCult" style="transform: translate(700px , 500px); background: linear-gradient(to left , #1ac8eb , white); animation: vin-oDinStanga 2s ease-out 0.5s forwards;">
-      <p>Artă: Caligrafia, pictura cu tuș, ceramica și teatrul tradițional (Opera din Beijing) sunt forme artistice celebre.</p>
-      <img id="pozaPicTus" src="Imagini/picTus.png" title="Pictura cu Tus">
-      <a href="https://ro.wikipedia.org/wiki/Arta_chinez%C4%83" target="_blank">
-        <img id="pozaCeramica" src="Imagini/ceramicaChin.png" title="Ceramica">
-      </a>
-    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Despre</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Despre proiect</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resurse</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Politică confidențialitate</a></li>
+                    <li><a href="#">Termeni utilizare</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            AI vibe coded development by <a href="https://biela.dev/" target="_blank" rel="noopener noreferrer">Biela.dev</a>, powered by <a href="https://teachmecode.ae/" target="_blank" rel="noopener noreferrer">TeachMeCode® Institute</a>
+        </div>
+    </footer>
 
-
-    <!-- Sarbatori -->
-    <div class="boxDeTextInfoCult" style="right: 0; transform: translate(-700px , 500px); background: linear-gradient(to right , #1ac8eb , white); animation: vin-oDinDreapta 2s ease-out 0.5s forwards;">
-      <p>Sărbători: Cea mai importantă este Anul Nou Chinezesc, sărbătorit cu dragoni, lampioane și mâncăruri tradiționale.</p>
-      <a href="https://ro.wikipedia.org/wiki/Anul_Nou_Chinezesc" target="_blank">
-        <img id="pozaAnNou" src="Imagini/anNouChin.png" title="Anul Nou Chinezesc">
-      </a>
-      <a href="https://ro.wikipedia.org/wiki/Lampion" target="_blank">
-        <img id="pozaLampioane" src="Imagini/lampioane.png" title="Lampioane">
-      </a>
-    </div>
-
-
-    <!-- Simboluri -->
-    <div class="boxDeTextInfoCult" style="right: 0; transform: translate(-200px , 50px); background: linear-gradient(to left , #1ac8eb , white); animation: vin-oDinDreapta 1.5s ease-out forwards;">
-      <p>Simboluri: Dragonul simbolizează puterea și norocul, iar culoarea roșie este considerată aducătoare de fericire.</p>
-      <a href="https://ro.wikipedia.org/wiki/Dragonul_asiatic" target="_blank">
-        <img id="pozaDragon" src="Imagini/dragonChinezesc.png" title="Dragonul Asiatic">
-      </a>
-      <img id="pozaRosie" src="Imagini/culoareRosieChinezeasca.png" title="Culoarea Rosie">
-    </div>
-
-  </div>
-
-  <button onclick="location.href='index.html'">⏪ Înapoi</button>
+    <script src="script.js"></script>
 </body>
 </html>

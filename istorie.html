@@ -1,82 +1,570 @@
-
-<!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <title>Istoria Chinei</title>
-  <link rel="stylesheet" href="stil.css">
-  <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Istoria Chinei: de la civilizațiile antice la China modernă, dinastii, revoluții și evenimente majore.">
+    <title>Istoria Chinei - Encyclopedia China</title>
+    <link rel="canonical" href="https://example.com/istorie.html">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>🏯 Istoria Chinei</h1>
-  </header>
+    <header class="header-fixed">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo">
+                    <span class="logo-icon">��️</span>
+                    <span class="logo-text">Encyclopedia China</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Acasă</a>
+                <a href="istorie.html" class="nav-link active">Istorie</a>
+                <a href="cultura.html" class="nav-link">Cultură</a>
+                <a href="geografie.html" class="nav-link">Geografie</a>
+                <a href="economie.html" class="nav-link">Economie</a>
+                <a href="gastronomie.html" class="nav-link">Gastronomie</a>
+            </nav>
+            <div class="header-right">
+                <div class="search-container">
+                    <input type="search" class="search-input" id="globalSearch" placeholder="Caută..." autocomplete="off">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+                <select class="language-selector" id="langSelector">
+                    <option value="ro">🇷🇴 Română</option>
+                    <option value="en">🇬🇧 English</option>
+                </select>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <div id="boxDeTextIstGeneral">
-      <p>China are o istorie de peste 5000 de ani, fiind una dintre cele mai vechi civilizații continue din lume.</p>
-  </div>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-sticky">
+                <div class="infobox">
+                    <h3 class="infobox-title">Istoria Chinei</h3>
+                    <div class="infobox-image">
+                        <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=400" alt="Marele Zid">
+                    </div>
+                    <table class="infobox-table">
+                        <tr>
+                            <td class="info-label">Civilizație</td>
+                            <td class="info-value">~5.000 ani</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Prima dinastie</td>
+                            <td class="info-value">Xia (~2070 î.Hr.)</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Unificare</td>
+                            <td class="info-value">221 î.Hr. (Qin)</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Republica</td>
+                            <td class="info-value">1912</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">RPC fondată</td>
+                            <td class="info-value">1 oct. 1949</td>
+                        </tr>
+                    </table>
+                </div>
+                <nav class="toc">
+                    <h3 class="toc-title">Cuprins</h3>
+                    <ul class="toc-list">
+                        <li><a href="#preistorie">Preistorie</a></li>
+                        <li><a href="#dinastii-antice">Dinastii Antice</a></li>
+                        <li><a href="#imperiul-unificat">Imperiul Unificat</a></li>
+                        <li><a href="#dinastii-clasice">Dinastii Clasice</a></li>
+                        <li><a href="#perioada-moderna">Perioada Modernă</a></li>
+                        <li><a href="#china-contemporana">China Contemporană</a></li>
+                    </ul>
+                </nav>
+                <div class="quick-links">
+                    <h3 class="quick-links-title">Linkuri Rapide</h3>
+                    <ul class="quick-links-list">
+                        <li><a href="#" class="quick-link" id="printPage">📄 Versiune tipărire</a></li>
+                        <li><a href="#" class="quick-link" id="permalink">🔗 Permalink</a></li>
+                        <li><a href="#" class="quick-link" id="citeThis">📚 Citează pagina</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
 
-  <div class="boxDeText">
+        <main class="content-main">
+            <nav class="breadcrumbs">
+                <a href="index.html">Acasă</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Istorie</span>
+            </nav>
 
-    <!-- Info Ist Dinastii + Scris-->
-    <div class="boxDeTextInfoIst" style="transform: translate(50px , 200px); background: linear-gradient(to left , #edb705 , #ebdeb5);">
-      <p> Primele dinastii cunoscute sunt Xia, Shang și Zhou, în care s-au format primele orașe și scrierea chineză.</p>
-      <img id="pozaDinastii" src="Imagini/CevaDinastii.png" title="Dinastii">
-      <img id="pozaScris" src="Imagini/giberishChinez.png" title="Proto Chineza">
+            <div class="page-header">
+                <h1 class="page-title">Istoria Chinei</h1>
+                <p class="page-subtitle">5.000 de ani de civilizație continuă</p>
+            </div>
+
+            <section id="preistorie" class="content-section fade-in">
+                <h2 class="section-heading">Preistorie și Primele Civilizații</h2>
+                <p class="lead-paragraph">
+                    <strong>China</strong> are una dintre cele mai lungi istorii continue documentate din lume, extinzându-se pe peste 5.000 de ani. Dovezile arheologice sugerează că hominizii au locuit în China de peste un milion de ani, iar <em>Homo sapiens</em> a apărut acolo în urmă cu aproximativ 200.000 de ani.<sup class="reference">[1]</sup>
+                </p>
+
+                <div class="timeline-era">
+                    <div class="era-header prehistoric">
+                        <h3>🗿 Epoca Neolitică (10.000 - 2.000 î.Hr.)</h3>
+                    </div>
+                    <div class="era-content">
+                        <div class="two-column-layout">
+                            <div class="column">
+                                <h4>Cultura Yangshao (5000-3000 î.Hr.)</h4>
+                                <ul class="styled-list">
+                                    <li>Prima cultură neolitică majoră</li>
+                                    <li>Agricultura bazată pe mei</li>
+                                    <li>Ceramică pictată caracteristică</li>
+                                    <li>Așezări în valea Fluviului Galben</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <h4>Cultura Longshan (3000-1900 î.Hr.)</h4>
+                                <ul class="styled-list">
+                                    <li>Ceramică neagră lustruită</li>
+                                    <li>Dezvoltarea zidurilor defensive</li>
+                                    <li>Stratificare socială complexă</li>
+                                    <li>Precursoare dinastiei Xia</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="dinastii-antice" class="content-section slide-in-left">
+                <h2 class="section-heading">Dinastiile Antice</h2>
+                <div class="dynasty-timeline">
+                    <div class="dynasty-item">
+                        <div class="dynasty-period">~2070-1600 î.Hr.</div>
+                        <div class="dynasty-content xia">
+                            <h3>Dinastia Xia (夏)</h3>
+                            <p>Prima dinastie chineză menționată în cronicile istorice. Existența sa este încă dezbătută de istorici, dar este considerată semi-legendară.</p>
+                            <ul class="dynasty-achievements">
+                                <li>Fondată de regele legendar Yu cel Mare</li>
+                                <li>Control asupra inundațiilor</li>
+                                <li>Primele forme de guvernare ereditară</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="dynasty-item">
+                        <div class="dynasty-period">1600-1046 î.Hr.</div>
+                        <div class="dynasty-content shang">
+                            <h3>Dinastia Shang (商)</h3>
+                            <p>Prima dinastie chineză confirmată arheologic. Cunoscută pentru bronzurile sale elaborate și sistemul de scriere timpuriu.</p>
+                            <div class="image-container">
+                                <img src="https://images.unsplash.com/photo-1547637589-f54c34f5d7a4?w=600" alt="Bronz antic chinezesc" class="content-image">
+                                <p class="image-caption">Recipient de bronz din dinastia Shang</p>
+                            </div>
+                            <ul class="dynasty-achievements">
+                                <li><strong>Scriere:</strong> Oracole pe oase și carapace de țestoasă</li>
+                                <li><strong>Bronz:</strong> Vase ceremoniale elaborate</li>
+                                <li><strong>Capitală:</strong> Anyang (Yin)</li>
+                                <li><strong>Societate:</strong> Sistem de clase bine definit</li>
+                                <li><strong>Religie:</strong> Cult al strămoșilor, divinație</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="dynasty-item">
+                        <div class="dynasty-period">1046-256 î.Hr.</div>
+                        <div class="dynasty-content zhou">
+                            <h3>Dinastia Zhou (周)</h3>
+                            <p>Cea mai lungă dinastie din istoria chineză, împărțită în Zhou de Vest și Zhou de Est. Perioada de vârf a filozofiei chineze clasice.</p>
+                            <ul class="dynasty-achievements">
+                                <li><strong>Mandatul Cerului:</strong> Conceptul legitimității politice</li>
+                                <li><strong>Feudalism:</strong> Sistem descentralizat de guvernare</li>
+                                <li><strong>Filozofie:</strong> Confucius, Laozi, Mozi, Zhuangzi</li>
+                                <li><strong>Tehnologie:</strong> Unelte de fier, monede</li>
+                            </ul>
+                            <div class="sub-period">
+                                <h4>⚔️ Perioada Statelor Combatante (475-221 î.Hr.)</h4>
+                                <p>Ultimii 254 de ani ai dinastiei Zhou, caracterizați de război constant între șapte state majore. Paradoxal, a fost o perioadă de mare dezvoltare intelectuală și tehnologică.</p>
+                                <div class="warring-states">
+                                    <span class="state">Qin</span>
+                                    <span class="state">Chu</span>
+                                    <span class="state">Zhao</span>
+                                    <span class="state">Wei</span>
+                                    <span class="state">Han</span>
+                                    <span class="state">Yan</span>
+                                    <span class="state">Qi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="imperiul-unificat" class="content-section fade-in">
+                <h2 class="section-heading">Imperiul Unificat</h2>
+                <div class="dynasty-item major">
+                    <div class="dynasty-period">221-206 î.Hr.</div>
+                    <div class="dynasty-content qin">
+                        <h3>Dinastia Qin (秦)</h3>
+                        <p class="lead-paragraph">
+                            <strong>Qin Shi Huang</strong> a unificat China pentru prima dată, devenind primul împărat al Chinei unite. Deși scurtă, dinastia Qin a avut un impact profund asupra dezvoltării viitoare a Chinei.<sup class="reference">[2]</sup>
+                        </p>
+                        <div class="emperor-profile">
+                            <h4>🤴 Qin Shi Huang (259-210 î.Hr.)</h4>
+                            <div class="two-column-layout">
+                                <div class="column">
+                                    <p><strong>Realizări majore:</strong></p>
+                                    <ul class="styled-list">
+                                        <li>Unificarea Chinei sub un singur conducător</li>
+                                        <li>Standardizarea scriptului, monedelor și măsurilor</li>
+                                        <li>Construirea Marii Zid (conectarea și extinderea fortificațiilor)</li>
+                                        <li>Construirea Armatei de Teracotă</li>
+                                        <li>Rețea extinsă de drumuri</li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <div class="image-container">
+                                        <img src="https://images.unsplash.com/photo-1584646098378-0874589d76b1?w=500" alt="Armata de Teracotă" class="content-image">
+                                        <p class="image-caption">Armata de Teracotă, Xi'an</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="highlight-box warning">
+                                ⚠️ <strong>Legalism sever:</strong> Arderea cărților și îngroparea vie a erudiților care se opuneau regimului au făcut din Qin Shi Huang o figură controversată.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dynasty-item major">
+                    <div class="dynasty-period">206 î.Hr. - 220 d.Hr.</div>
+                    <div class="dynasty-content han">
+                        <h3>Dinastia Han (汉)</h3>
+                        <p>
+                            Considerată vârsta de aur a civilizației chineze, dinastia Han a consolidat și extins realizările dinastiei Qin. Etnică majoritară chineză își trage numele de la această dinastie.
+                        </p>
+                        <div class="han-achievements">
+                            <div class="achievement-card">
+                                <h4>🛤️ Drumurile Mătăsii</h4>
+                                <p>Rețele comerciale care conectau China cu Asia Centrală, Orientul Mijlociu și Europa, facilitând schimbul de mărfuri, idei și tehnologii.</p>
+                            </div>
+                            <div class="achievement-card">
+                                <h4>📜 Confucianism de Stat</h4>
+                                <p>Adoptarea confucianismului ca ideologie oficială, stabilind sistemul de examene imperiale pentru funcționarii publici.</p>
+                            </div>
+                            <div class="achievement-card">
+                                <h4>📚 Hârtie și Porțelan</h4>
+                                <p>Invenția hârtiei (105 d.Hr. de Cai Lun) și perfecționarea tehnicilor de fabricare a porțelanului.</p>
+                            </div>
+                            <div class="achievement-card">
+                                <h4>🔬 Știință și Tehnologie</h4>
+                                <p>Avansuri în astronomie, matematică, medicină. Înregistrări detaliate istorice (Shiji de Sima Qian).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="dinastii-clasice" class="content-section slide-in-right">
+                <h2 class="section-heading">Dinastiile Clasice și Vârsta de Aur</h2>
+                <div class="dynasty-item">
+                    <div class="dynasty-period">618-907 d.Hr.</div>
+                    <div class="dynasty-content tang">
+                        <h3>Dinastia Tang (唐)</h3>
+                        <p>
+                            Considerată vârful culturii clasice chineze, dinastia Tang a fost o epocă de prosperitate, cosmopolitism și realizări artistice remarcabile.
+                        </p>
+                        <ul class="dynasty-achievements">
+                            <li><strong>Capitală:</strong> Chang'an (Xi'an), cel mai mare oraș din lume la acea vreme</li>
+                            <li><strong>Poezie:</strong> Vârful poeziei chineze clasice (Li Bai, Du Fu)</li>
+                            <li><strong>Budism:</strong> Înflorirea budismului în China</li>
+                            <li><strong>Comerț:</strong> Drumurile Mătăsii la apogeu</li>
+                            <li><strong>Tehnologie:</strong> Tipărirea cu blocuri de lemn, pulbere de pușcă</li>
+                            <li><strong>Artă:</strong> Pictură, caligrarafie, ceramică de înaltă calitate</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dynasty-item">
+                    <div class="dynasty-period">960-1279 d.Hr.</div>
+                    <div class="dynasty-content song">
+                        <h3>Dinastia Song (宋)</h3>
+                        <p>
+                            Perioadă de transformare economică și tehnologică, considerată "Renașterea Chineză". China Song a fost probabil societatea tehnologic cea mai avansată din lume la acea vreme.
+                        </p>
+                        <div class="song-innovations">
+                            <h4>Inovații Majore:</h4>
+                            <div class="innovations-grid">
+                                <div class="innovation">
+                                    <span class="innovation-icon">��️</span>
+                                    <strong>Tipărire mobilă</strong>
+                                    <p>Bi Sheng (1040)</p>
+                                </div>
+                                <div class="innovation">
+                                    <span class="innovation-icon">🧭</span>
+                                    <strong>Busola magnetică</strong>
+                                    <p>Navigație</p>
+                                </div>
+                                <div class="innovation">
+                                    <span class="innovation-icon">💣</span>
+                                    <strong>Pulbere de pușcă</strong>
+                                    <p>Aplicații militare</p>
+                                </div>
+                                <div class="innovation">
+                                    <span class="innovation-icon">💰</span>
+                                    <strong>Bani de hârtie</strong>
+                                    <p>Prima monedă fiduciară</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Economia Song a fost prima din lume care a depășit 1% din PIB-ul global, bazată pe urbanizare, comerț și industrie.</p>
+                    </div>
+                </div>
+
+                <div class="dynasty-item">
+                    <div class="dynasty-period">1271-1368 d.Hr.</div>
+                    <div class="dynasty-content yuan">
+                        <h3>Dinastia Yuan (元)</h3>
+                        <p>
+                            Fondată de Kublai Khan, nepotul lui Ginghis Khan, Yuan a fost prima dinastie străină care a condus întreaga China. Prima dată când tot teritoriul Chinei a fost sub dominație mongolă.
+                        </p>
+                        <ul class="dynasty-achievements">
+                            <li>Capitală: Khanbaliq (Beijing modern)</li>
+                            <li>Extindere teritorială maximă</li>
+                            <li>Marco Polo vizitează curtea lui Kublai Khan</li>
+                            <li>Dezvoltarea dramei chineze (Opera Yuan)</li>
+                            <li>Comerț extins pe Drumurile Mătăsii</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dynasty-item">
+                    <div class="dynasty-period">1368-1644 d.Hr.</div>
+                    <div class="dynasty-content ming">
+                        <h3>Dinastia Ming (明)</h3>
+                        <p>
+                            Restabilirea conducerii han chineze după o secol de dominație mongolă. Perioada marilor explorări maritime și a realizărilor culturale impresionante.
+                        </p>
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800" alt="Marele Zid" class="content-image">
+                            <p class="image-caption">Marele Zid Chinezesc - cea mai mare parte a zidului actual datează din dinastia Ming</p>
+                        </div>
+                        <ul class="dynasty-achievements">
+                            <li><strong>Marele Zid:</strong> Reconstrucție și extindere masivă (forma actuală)</li>
+                            <li><strong>Orașul Interzis:</strong> Construcția palatului imperial din Beijing</li>
+                            <li><strong>Zheng He:</strong> Expedițiile navale (1405-1433) până în Africa de Est</li>
+                            <li><strong>Porțelanul ming:</strong> Ceramică albastră și albă celebră</li>
+                            <li><strong>Literatură:</strong> Romane clasice chineze (Journey to the West, Water Margin)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dynasty-item">
+                    <div class="dynasty-period">1644-1912 d.Hr.</div>
+                    <div class="dynasty-content qing">
+                        <h3>Dinastia Qing (清)</h3>
+                        <p>
+                            Ultima dinastie imperială a Chinei, fondată de Manciții. Inițial prosperă și extinsă teritorial, dar în declin în secolele XIX-XX din cauza presiunilor occidentale și interne.
+                        </p>
+                        <div class="qing-periods">
+                            <div class="qing-period prosperity">
+                                <h4>🌟 Epoca de Glorie (1644-1796)</h4>
+                                <ul>
+                                    <li>Împărații Kangxi, Yongzheng, Qianlong</li>
+                                    <li>Expansiune teritorială maximă</li>
+                                    <li>Prosperitate economică</li>
+                                    <li>Artă și cultură înflorite</li>
+                                </ul>
+                            </div>
+                            <div class="qing-period decline">
+                                <h4>⚠️ Declin și Crize (1796-1912)</h4>
+                                <ul>
+                                    <li>Războaiele Opiului (1839-1842, 1856-1860)</li>
+                                    <li>Răscoala Taiping (1850-1864) - 20-30 milioane morți</li>
+                                    <li>Războiul Sino-Japonez (1894-1895)</li>
+                                    <li>Răscoala Boxerilor (1899-1901)</li>
+                                    <li>Reforma de 100 de zile (1898) - eșuată</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="perioada-moderna" class="content-section fade-in">
+                <h2 class="section-heading">Perioada Modernă (1912-1949)</h2>
+                <div class="modern-timeline">
+                    <div class="modern-event">
+                        <div class="event-year">1912</div>
+                        <div class="event-content">
+                            <h3>🏛️ Revoluția Xinhai și Republica China</h3>
+                            <p>Abdicarea ultimului împărat (Puyi în vârstă de 6 ani) marchează sfârșitul a peste 2.000 de ani de conducere imperială. Sun Yat-sen devine primul președinte provizoriu al Republicii China.</p>
+                        </div>
+                    </div>
+
+                    <div class="modern-event">
+                        <div class="event-year">1916-1928</div>
+                        <div class="event-content">
+                            <h3>⚔️ Epoca Stăpânilor de Război</h3>
+                            <p>Fragmentarea Chinei sub controlul diferitelor căpeteniilor militare regionale. Haos politic și social generalizat.</p>
+                        </div>
+                    </div>
+
+                    <div class="modern-event">
+                        <div class="event-year">1921</div>
+                        <div class="event-content">
+                            <h3>🚩 Înființarea Partidului Comunist Chinez</h3>
+                            <p>Fondarea PCC la Shanghai cu 13 delegați, inclusiv Mao Zedong. Marchează începutul mișcării comuniste în China.</p>
+                        </div>
+                    </div>
+
+                    <div class="modern-event">
+                        <div class="event-year">1927-1949</div>
+                        <div class="event-content">
+                            <h3>⚔️ Războiul Civil Chinez</h3>
+                            <p>Conflict între Partidul Naționalist (Kuomintang) condus de Chiang Kai-shek și Partidul Comunist Chinez condus de Mao Zedong. Întrerupt de invazia japoneză (1937-1945), apoi reluat.</p>
+                            <div class="highlight-box">
+                                📍 <strong>Marele Marș (1934-1935):</strong> Retragere strategică a comuniștilor pe 9.000 km, din Jiangxi până în Shaanxi. Din 86.000 de participanți, doar 8.000 au supraviețuit.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modern-event">
+                        <div class="event-year">1937-1945</div>
+                        <div class="event-content">
+                            <h3>🎌 Al Doilea Război Sino-Japonez</h3>
+                            <p>Invazia japoneză a Chinei, parte a celui de-Al Doilea Război Mondial. Atrocități precum Masacrul de la Nanjing (1937). Estimări: 15-20 milioane de chinezi uciși.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="china-contemporana" class="content-section slide-in-left">
+                <h2 class="section-heading">China Contemporană (1949-prezent)</h2>
+                <div class="contemporary-timeline">
+                    <div class="contemporary-event founding">
+                        <div class="event-date">1 octombrie 1949</div>
+                        <div class="event-content">
+                            <h3>🇨🇳 Fondarea Republicii Populare Chineze</h3>
+                            <p>Mao Zedong proclamă înființarea RPC în Piața Tiananmen, Beijing. Forțele naționaliststeretrăiesc în Taiwan.</p>
+                            <blockquote class="historical-quote">
+                                "Poporul chinezesc s-a ridicat în picioare!" - Mao Zedong
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="contemporary-event">
+                        <div class="event-date">1958-1962</div>
+                        <div class="event-content">
+                            <h3>🌾 Marele Salt Înainte</h3>
+                            <p>Campanie de colectivizare și industrializare rapidă. Eșec catastrofal care a dus la Marea Foamete Chineză (1959-1961), ucigând 15-45 milioane de oameni.</p>
+                        </div>
+                    </div>
+
+                    <div class="contemporary-event">
+                        <div class="event-date">1966-1976</div>
+                        <div class="event-content">
+                            <h3>🔴 Revoluția Culturală</h3>
+                            <p>Mișcare sociopolitică lansată de Mao pentru a-și reafirma autoritatea. Gardii Roșii, persecuții împotriva "elementelor burgheze", distrugerea patrimoniului cultural. Milioane de victime.</p>
+                        </div>
+                    </div>
+
+                    <div class="contemporary-event reform">
+                        <div class="event-date">1978</div>
+                        <div class="event-content">
+                            <h3>📈 Reforme Economice - Deng Xiaoping</h3>
+                            <p>Deng Xiaoping inițiază politica "Reformă și Deschidere" (改革开放), transformând economia planificată într-o "economie socialistă de piață".</p>
+                            <div class="reform-highlights">
+                                <h4>Reforme cheie:</h4>
+                                <ul class="styled-list">
+                                    <li>Zone economice speciale (Shenzhen, etc.)</li>
+                                    <li>Decomunalizarea agriculturii</li>
+                                    <li>Deschidere către investiții străine</li>
+                                    <li>Privatizare parțială a întreprinderilor de stat</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contemporary-event">
+                        <div class="event-date">2001</div>
+                        <div class="event-content">
+                            <h3>🌍 Aderarea la OMC</h3>
+                            <p>China se alătură Organizației Mondiale a Comerțului, accelerând integrarea sa în economia globală și transformarea în "fabrica lumii".</p>
+                        </div>
+                    </div>
+
+                    <div class="contemporary-event">
+                        <div class="event-date">2008</div>
+                        <div class="event-content">
+                            <h3>🏅 Jocurile Olimpice de la Beijing</h3>
+                            <p>China găzduiește Jocurile Olimpice de vară, demonstrând ascensiunea sa ca putere globală.</p>
+                        </div>
+                    </div>
+
+                    <div class="contemporary-event">
+                        <div class="event-date">2013</div>
+                        <div class="event-content">
+                            <h3>🛤️ Belt and Road Initiative</h3>
+                            <p>Xi Jinping lansează inițiativa "Centura și Drumul", un proiect masiv de infrastructură globală inspirat de vechile Drumuri Mătăsii.</p>
+                        </div>
+                    </div>
+
+                    <div class="contemporary-event">
+                        <div class="event-date">2020-prezent</div>
+                        <div class="event-content">
+                            <h3>🌐 China în Secolul XXI</h3>
+                            <p>China continuă să crească ca superputere economică și tehnologică, cu ambițiii de a deveni neutră din punct de vedere al carbonului până în 2060 și de a construi o "societate moderat prosperă".</p>
+                            <div class="modern-achievements">
+                                <span class="achievement">🚄 Rețea feroviară de mare viteză</span>
+                                <span class="achievement">🚀 Program spațial avansat</span>
+                                <span class="achievement">📱 Lideri tech (Alibaba, Tencent, Huawei)</span>
+                                <span class="achievement">🌱 Investiții masive în energie verde</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-heading">Referințe</h2>
+                <ol class="references-list">
+                    <li>Fairbank, John K. & Goldman, Merle. "China: A New History" (2006)</li>
+                    <li>Ebrey, Patricia Buckley. "The Cambridge Illustrated History of China" (2010)</li>
+                    <li>Spence, Jonathan D. "The Search for Modern China" (1990)</li>
+                    <li>Mitter, Rana. "Modern China: A Very Short Introduction" (2016)</li>
+                </ol>
+            </section>
+        </main>
     </div>
 
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Despre</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Despre proiect</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resurse</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Politică confidențialitate</a></li>
+                    <li><a href="#">Termeni utilizare</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            AI vibe coded development by <a href="https://biela.dev/" target="_blank" rel="noopener noreferrer">Biela.dev</a>, powered by <a href="https://teachmecode.ae/" target="_blank" rel="noopener noreferrer">TeachMeCode® Institute</a>
+        </div>
+    </footer>
 
-    <!-- Info Ist Unificare + Zid -->
-    <div class="boxDeTextInfoIst" style="transform: translate(140% , 130%); background: linear-gradient(to bottom , #edb705 , #ebdeb5);">
-      <p> În timpul dinastiei Qin (221 î.Hr.), țara a fost unificată pentru prima dată, iar împăratul Qin Shi Huang a început construcția Marelui Zid Chinezesc.</p>
-      <a href="https://ro.wikipedia.org/wiki/Qin_Shihung-di" target="_blank">
-        <img id="pozaQin" src="Imagini/ImparatQinShiHuang.png" title="Imparatul Qin Shin Huang">
-      </a>
-      <a href="https://ro.wikipedia.org/wiki/Marele_Zid_Chinezesc" target="_blanc">
-        <img id="pozaZid" src="Imagini/constrZidChin.png" title="Construirea Marelui Zid Chinezesc">
-      </a>
-    </div>
-
-
-    <!-- Info Ist Dinastia Han + Drumul Matasii -->
-    <div class="boxDeTextInfoIst" style="transform: translate(265% , 200px); background: linear-gradient(to top , #edb705 , #ebdeb5);">
-      <p> Dinastia Han a adus o perioadă de mare prosperitate, când China a deschis Drumul Mătăsii, făcând comerț cu Europa.</p>
-      <a href="http://ro.wikipedia.org/wiki/Dinastia_Han" target="_blank">
-        <img id="pozaDinHan" src="Imagini/DinastiaHan.png" title="Dinastia Han">
-      </a>
-      <a href="https://ro.wikipedia.org/wiki/Drumul_m%C4%83t%C4%83sii" target="_blanc">
-        <img id="pozaDrumMatase" src="Imagini/DrumMatase.png" title="Drumul Matasii">
-      </a>
-    </div>
-
-
-    <!-- Info Ist Perioade de inflorire + de declin -->
-    <div class="boxDeTextInfoIst" style="transform: translate(390%, 130%); background: linear-gradient(to bottom , #edb705 , #ebdeb5);">
-      <p> În secolele următoare, China a trecut prin perioade de înflorire (<a href="https://ro.wikipedia.org/wiki/Dinastia_Tang" target="_blank"> Tang</a>, <a href="https://ro.wikipedia.org/wiki/Dinastia_Song" target="_blank">Song</a> , <a href="https://ro.wikipedia.org/wiki/Dinastia_Ming" target="_blank">Ming</a>) și de declin (Qing, invaziile străine).</p>
-      <a href="https://ro.wikipedia.org/wiki/Dinastia_Qing" target="_blank">
-        <img id="pozaQing" src="Imagini/DinQing.png" title="Dinastia Qing">
-      </a>
-      <a href="https://ro.wikipedia.org/wiki/Dinastia_Qing" target="_blanc">
-        <img id="pozaQing2" src="Imagini/DinQing2.png" title="Dinastia Qing">
-      </a>
-    </div>
-
-
-    <!-- Info Ist RPC -->
-    <div class="boxDeTextInfoIst" style="transform: translate(519% , 200px); background: linear-gradient(to right , #edb705 , #ebdeb5);">
-      <p> În 1949, a fost proclamată Republica Populară Chineză, condusă de Mao Zedong.</p>
-      <a href="https://ro.wikipedia.org/wiki/Mao_Zedong" target="_blank">
-        <img id="pozaMaoZedong" src="Imagini/MaoZedong.png" title="Mao Zedong">
-      </a>
-      <a href="https://ro.wikipedia.org/wiki/Republica_Popular%C4%83_Chinez%C4%83" target="_blanc">
-        <img id="pozaRPC" src="Imagini/RepPopChin.png" title="Republica Populara Chineza">
-      </a>
-    </div>
-
-  </div>
-
+    <script src="script.js"></script>
 </body>
-
-    <button onclick="location.href='index.html'"  style="transform: translateY(500px);">⏪ Înapoi</button>
-
 </html>

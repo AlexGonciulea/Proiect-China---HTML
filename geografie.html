@@ -1,82 +1,537 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <title>Geografia Chinei</title>
-  <link rel="stylesheet" href="stil.css">
-  <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Geografia Chinei: relief, climă, râuri, biodiversitate și resurse naturale.">
+    <title>Geografia Chinei - Encyclopedia China</title>
+    <link rel="canonical" href="https://example.com/geografie.html">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>🌄 Geografia Chinei</h1>
-  </header>
+    <header class="header-fixed">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="logo">
+                    <span class="logo-icon">��️</span>
+                    <span class="logo-text">Encyclopedia China</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Acasă</a>
+                <a href="istorie.html" class="nav-link">Istorie</a>
+                <a href="cultura.html" class="nav-link">Cultură</a>
+                <a href="geografie.html" class="nav-link active">Geografie</a>
+                <a href="economie.html" class="nav-link">Economie</a>
+                <a href="gastronomie.html" class="nav-link">Gastronomie</a>
+            </nav>
+            <div class="header-right">
+                <div class="search-container">
+                    <input type="search" class="search-input" id="globalSearch" placeholder="Caută..." autocomplete="off">
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+                <select class="language-selector" id="langSelector">
+                    <option value="ro">🇷🇴 Română</option>
+                    <option value="en">🇬🇧 English</option>
+                </select>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-    <div id="boxDeTextGeoGeneral">
-      <p>China este a treia țară ca mărime din lume, după Rusia și Canada, având o suprafață de aproximativ 9,6 milioane km². Fluviile Yangtze și Huang He au avut un rol crucial în dezvoltarea agriculturii și a civilizației chineze.</p>
-      <p> Relieful său este extrem de variat:</p>
+    <div class="page-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-sticky">
+                <div class="infobox">
+                    <h3 class="infobox-title">Geografia Chinei</h3>
+                    <div class="infobox-image">
+                        <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400" alt="Munți din China">
+                    </div>
+                    <table class="infobox-table">
+                        <tr>
+                            <td class="info-label">Suprafață totală</td>
+                            <td class="info-value">9,6 milioane km²</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Rang mondial</td>
+                            <td class="info-value">#3 sau #4</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Lungime coastă</td>
+                            <td class="info-value">14.500 km</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Cel mai înalt punct</td>
+                            <td class="info-value">Everest (8.848m)</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Cel mai jos punct</td>
+                            <td class="info-value">Turpan (-154m)</td>
+                        </tr>
+                        <tr>
+                            <td class="info-label">Cel mai lung fluviu</td>
+                            <td class="info-value">Yangtze (6.300km)</td>
+                        </tr>
+                    </table>
+                </div>
+                <nav class="toc">
+                    <h3 class="toc-title">Cuprins</h3>
+                    <ul class="toc-list">
+                        <li><a href="#prezentare">Prezentare Generală</a></li>
+                        <li><a href="#relief">Relief și Regiuni</a></li>
+                        <li><a href="#rauri">Râuri și Lacuri</a></li>
+                        <li><a href="#clima">Climă</a></li>
+                        <li><a href="#biodiversitate">Biodiversitate</a></li>
+                        <li><a href="#resurse">Resurse Naturale</a></li>
+                    </ul>
+                </nav>
+                <div class="quick-links">
+                    <h3 class="quick-links-title">Linkuri Rapide</h3>
+                    <ul class="quick-links-list">
+                        <li><a href="#" class="quick-link" id="printPage">📄 Versiune tipărire</a></li>
+                        <li><a href="#" class="quick-link" id="permalink">🔗 Permalink</a></li>
+                        <li><a href="#" class="quick-link" id="citeThis">📚 Citează pagina</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content-main">
+            <nav class="breadcrumbs">
+                <a href="index.html">Acasă</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Geografie</span>
+            </nav>
+
+            <div class="page-header">
+                <h1 class="page-title">Geografia Chinei</h1>
+                <p class="page-subtitle">Un teritoriu vast și divers, de la munți la deșerturi</p>
+            </div>
+
+            <section id="prezentare" class="content-section fade-in">
+                <p class="lead-paragraph">
+                    <strong>China</strong> este a treia sau a patra cea mai mare țară din lume în funcție de măsurare, acoperind aproximativ 9,6 milioane de kilometri pătrați. Geografia sa este remarcabil de diversă, cuprinzând unele dintre cele mai înalte munți din lume, vaste platouri, deșerturi întinse și fertile câmpii de coastă.<sup class="reference">[1]</sup>
+                </p>
+                <p>
+                    Țara se întinde pe aproximativ 5.000 km de la est la vest și 5.500 km de la nord la sud, cu granițe terestre cu 14 țări și o coastă lungă de peste 14.500 km de-a lungul Oceanului Pacific. Această diversitate geografică a avut un impact profund asupra istoriei, culturii și dezvoltării economice a Chinei.
+                </p>
+            </section>
+
+            <section id="relief" class="content-section slide-in-left">
+                <h2 class="section-heading">Relief și Regiuni Geografice</h2>
+                <p>
+                    Relieful Chinei prezintă o distribuție distinctă în "trepte", coborând de la vest spre est, de la Platoul Tibet până la câmpiile de coastă de la Oceanul Pacific.
+                </p>
+
+                <div class="terrain-levels">
+                    <div class="terrain-card level-1">
+                        <h3>🏔️ Prima Treaptă: Platoul Tibet-Qinghai</h3>
+                        <div class="terrain-stats">
+                            <span class="stat">Altitudine medie: 4.000-5.000m</span>
+                            <span class="stat">Suprafață: 2,5 milioane km²</span>
+                        </div>
+                        <p>
+                            Cunoscută ca "Acoperișul Lumii", această regiune include Platoul Tibet și conține cele mai înalte vârfuri ale planetei, inclusiv Muntele Everest (8.848m). Regiunea este caracterizată de climă extremă, aer rarefiat și peisaje spectaculoase.
+                        </p>
+                        <ul class="styled-list">
+                            <li>Munții Himalaya - cel mai înalt lanț muntos din lume</li>
+                            <li>Munții Kunlun - barieră naturală nordică</li>
+                            <li>Lanțul Karakoram - vest, la granița cu Pakistan</li>
+                            <li>Munții Tian Shan - nord-vest</li>
+                        </ul>
+                    </div>
+
+                    <div class="terrain-card level-2">
+                        <h3>⛰️ A Doua Treaptă: Platouri și Bazine</h3>
+                        <div class="terrain-stats">
+                            <span class="stat">Altitudine: 1.000-2.000m</span>
+                            <span class="stat">Suprafață: 3 milioane km²</span>
+                        </div>
+                        <p>
+                            Include platouri vaste, bazine și munți de altitudine medie. Această zonă este mai densă populată decât prima treaptă și conține importante resurse naturale.
+                        </p>
+                        <ul class="styled-list">
+                            <li>Platoul Interior Mongol - stepe și pășuni</li>
+                            <li>Platoul Loess - sol fertil galben</li>
+                            <li>Platoul Yunnan-Guizhou - peisaje karstice</li>
+                            <li>Bazinul Tarim - deșert Taklamakan</li>
+                            <li>Bazinul Dzungarian - nord-vest</li>
+                        </ul>
+                    </div>
+
+                    <div class="terrain-card level-3">
+                        <h3>🌾 A Treia Treaptă: Câmpii și Dealuri</h3>
+                        <div class="terrain-stats">
+                            <span class="stat">Altitudine: 0-500m</span>
+                            <span class="stat">Suprafață: 1,8 milioane km²</span>
+                        </div>
+                        <p>
+                            Regiunea de est, caracterizată prin câmpii fertile și dealuri ondulate. Este cea mai populată și mai dezvoltată economic regiune a Chinei.
+                        </p>
+                        <ul class="styled-list">
+                            <li>Câmpia Nord-Chinei - "mărul discordiei" agricol</li>
+                            <li>Câmpia Fluviului Yangtze - "țara orezului și peștelui"</li>
+                            <li>Câmpia Nord-Estică (Manchuria) - agricultură extensivă</li>
+                            <li>Delta Perlelor - zonă urbană densă</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800" alt="Munții Guilin" class="content-image">
+                    <p class="image-caption">Peisajul karstic spectaculos din Guilin, provincia Guangxi</p>
+                </div>
+            </section>
+
+            <section id="rauri" class="content-section fade-in">
+                <h2 class="section-heading">Râuri și Lacuri</h2>
+                <p>
+                    China are peste 50.000 de râuri cu bazine hidrografice mai mari de 100 km². Cele mai importante râuri curg de la vest la est, jucând un rol crucial în agricultură, transport și generarea de energie.
+                </p>
+
+                <div class="rivers-section">
+                    <div class="river-card major">
+                        <div class="river-header">
+                            <h3>🌊 Fluviul Yangtze (长江)</h3>
+                            <span class="river-length">6.300 km</span>
+                        </div>
+                        <div class="image-container">
+                            <img src="https://images.unsplash.com/photo-1590415534047-2f664dbef24b?w=600" alt="Fluviul Yangtze" class="content-image">
+                            <p class="image-caption">Barajul celor Trei Defilee pe Fluviul Yangtze</p>
+                        </div>
+                        <p>
+                            Cel mai lung fluviu din Asia și al treilea cel mai lung din lume. Yangtze izvorăște din Platoul Tibet și traversează 11 provincii înainte de a se vărsa în Marea Chinei de Est lângă Shanghai.
+                        </p>
+                        <div class="river-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Bazin hidrografic</span>
+                                <span class="stat-value">1,8 milioane km²</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Populație bazin</span>
+                                <span class="stat-value">400 milioane</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">PIB bazin</span>
+                                <span class="stat-value">40% din PIB China</span>
+                            </div>
+                        </div>
+                        <p class="river-highlight">
+                            <strong>Barajul celor Trei Defilee</strong> este cel mai mare baraj hidroelectric din lume, cu o capacitate de 22.500 MW.
+                        </p>
+                    </div>
+
+                    <div class="river-card major">
+                        <div class="river-header">
+                            <h3>💛 Fluviul Galben (黄河)</h3>
+                            <span class="river-length">5.464 km</span>
+                        </div>
+                        <p>
+                            Al doilea cel mai lung fluviu din China, cunoscut ca "leagănul civilizației chineze". Numele provine de la cantitatea mare de sedimente galbene (loess) pe care le transportă.
+                        </p>
+                        <div class="river-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Bazin hidrografic</span>
+                                <span class="stat-value">752.000 km²</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Sedimente anuale</span>
+                                <span class="stat-value">1,6 miliarde tone</span>
+                            </div>
+                        </div>
+                        <p class="river-highlight">
+                            Istoric, fluviul a fost responsabil pentru inundații devastatoare, fiind supranumit "Chinei Sorrow" (Suferința Chinei).
+                        </p>
+                    </div>
+
+                    <div class="river-card">
+                        <div class="river-header">
+                            <h3>💎 Fluviul Perlelor (珠江)</h3>
+                            <span class="river-length">2.400 km</span>
+                        </div>
+                        <p>
+                            Al treilea cel mai lung fluviu din China, traversând sud-estul țării. Delta Perlelor este una dintre cele mai dens populate și mai dezvoltate regiuni din lume, incluzând Guangzhou, Shenzhen și Hong Kong.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lakes-section">
+                    <h3>Lacuri Importante</h3>
+                    <div class="lakes-grid">
+                        <div class="lake-item">
+                            <strong>🏞️ Lacul Qinghai</strong>
+                            <p>Cel mai mare lac din China (4.489 km²), lac sărat în provincie Qinghai</p>
+                        </div>
+                        <div class="lake-item">
+                            <strong>🏞️ Lacul Poyang</strong>
+                            <p>Cel mai mare lac de apă dulce, în provincia Jiangxi</p>
+                        </div>
+                        <div class="lake-item">
+                            <strong>🏞️ Lacul Dongting</strong>
+                            <p>Al doilea cel mai mare lac de apă dulce, în Hunan</p>
+                        </div>
+                        <div class="lake-item">
+                            <strong>🏞️ Lacul Taihu</strong>
+                            <p>Unul dintre cele Cinci Mari Lacuri, lângă Shanghai</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="clima" class="content-section slide-in-right">
+                <h2 class="section-heading">Climă</h2>
+                <p>
+                    Datorită vastității sale teritoriale, China prezintă o diversitate climatică remarcabilă, de la climat subarctic în nord la tropical în sud, și de la climat arid în vest la musonice în est.<sup class="reference">[2]</sup>
+                </p>
+
+                <div class="climate-zones">
+                    <div class="climate-card">
+                        <div class="climate-icon">❄️</div>
+                        <h3>Climat Continental Rece</h3>
+                        <p class="climate-region">Nord-est (Manchuria, Mongolia Interioară)</p>
+                        <ul class="climate-features">
+                            <li>Ierni lungi, foarte reci (-20°C până la -40°C)</li>
+                            <li>Veri scurte, calde</li>
+                            <li>Precipitații reduse (400-500 mm/an)</li>
+                        </ul>
+                    </div>
+
+                    <div class="climate-card">
+                        <div class="climate-icon">🌤️</div>
+                        <h3>Climat Temperat Continental</h3>
+                        <p class="climate-region">Nord China, Câmpia Nord-Chinei</p>
+                        <ul class="climate-features">
+                            <li>Ierni reci și uscate (-5°C până la 5°C)</li>
+                            <li>Veri calde și umede (25°C - 30°C)</li>
+                            <li>Precipitații moderate (500-700 mm/an)</li>
+                            <li>Influență musonică</li>
+                        </ul>
+                    </div>
+
+                    <div class="climate-card">
+                        <div class="climate-icon">🌧️</div>
+                        <h3>Climat Subtropical Umed</h3>
+                        <p class="climate-region">Centrul și sud-estul Chinei</p>
+                        <ul class="climate-features">
+                            <li>Ierni blânde (5°C - 10°C)</li>
+                            <li>Veri calde și umede (25°C - 35°C)</li>
+                            <li>Precipitații abundente (1.000-2.000 mm/an)</li>
+                            <li>Patru anotimpuri distincte</li>
+                        </ul>
+                    </div>
+
+                    <div class="climate-card">
+                        <div class="climate-icon">🌴</div>
+                        <h3>Climat Tropical Musonice</h3>
+                        <p class="climate-region">Sud extrem (Hainan, sud Yunnan)</p>
+                        <ul class="climate-features">
+                            <li>Temperaturi ridicate tot anul (20°C - 30°C)</li>
+                            <li>Umiditate constantă ridicată</li>
+                            <li>Precipitații abundente (1.500-2.500 mm/an)</li>
+                            <li>Fără iarnă adevărată</li>
+                        </ul>
+                    </div>
+
+                    <div class="climate-card">
+                        <div class="climate-icon">🏜️</div>
+                        <h3>Climat Arid și Deșertic</h3>
+                        <p class="climate-region">Nord-vest (Xinjiang, Mongolia Interioară)</p>
+                        <ul class="climate-features">
+                            <li>Precipitații foarte reduse (<200 mm/an)</li>
+                            <li>Variații mari de temperatură zi/noapte</li>
+                            <li>Ierni reci, veri foarte calde</li>
+                            <li>Deșerturile Gobi și Taklamakan</li>
+                        </ul>
+                    </div>
+
+                    <div class="climate-card">
+                        <div class="climate-icon">🏔️</div>
+                        <h3>Climat Alpin</h3>
+                        <p class="climate-region">Platoul Tibet, zonele montane înalte</p>
+                        <ul class="climate-features">
+                            <li>Temperaturi scăzute tot anul</li>
+                            <li>Aer rarefiat</li>
+                            <li>Radiație solară intensă</li>
+                            <li>Variații mari de temperatură</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="biodiversitate" class="content-section fade-in">
+                <h2 class="section-heading">Biodiversitate și Ecosisteme</h2>
+                <p>
+                    China este unul dintre cele 17 țări megadiversificate din lume, găzduind aproximativ 10% din speciile de plante și animale ale planetei. Diversitatea ecosistemelor variază de la păduri tropicale la tundră alpină.<sup class="reference">[3]</sup>
+                </p>
+
+                <div class="biodiversity-section">
+                    <div class="bio-stats-grid">
+                        <div class="bio-stat">
+                            <span class="bio-number">35.000+</span>
+                            <span class="bio-label">Specii de plante vasculare</span>
+                        </div>
+                        <div class="bio-stat">
+                            <span class="bio-number">6.500+</span>
+                            <span class="bio-label">Specii de vertebrate</span>
+                        </div>
+                        <div class="bio-stat">
+                            <span class="bio-number">2.300+</span>
+                            <span class="bio-label">Arii protejate</span>
+                        </div>
+                        <div class="bio-stat">
+                            <span class="bio-number">18%</span>
+                            <span class="bio-label">Teritoriu protejat</span>
+                        </div>
+                    </div>
+
+                    <h3>Specii Emblematice</h3>
+                    <div class="species-grid">
+                        <div class="species-card">
+                            <div class="species-image">
+                                <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=400" alt="Panda gigant" class="content-image">
+                            </div>
+                            <h4>🐼 Panda Gigant</h4>
+                            <p>Simbolul Chinei, aproximativ 1.864 de exemplare în sălbăticie. Habitat: păduri de bambus din provinciile Sichuan, Shaanxi și Gansu.</p>
+                        </div>
+
+                        <div class="species-card">
+                            <div class="species-image">
+                                <img src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?w=400" alt="Tigru" class="content-image">
+                            </div>
+                            <h4>🐅 Tigrul Sud-Chinezesc</h4>
+                            <p>Subspecie critică pe cale de dispariție, posibil dispărută din sălbăticie. Supraviețuiește doar în programele de reproducție în captivitate.</p>
+                        </div>
+
+                        <div class="species-card">
+                            <div class="species-image">
+                                <img src="https://images.unsplash.com/photo-1583447722088-20d90e753c26?w=400" alt="Leopard zăpezii" class="content-image">
+                            </div>
+                            <h4>🐆 Leopardul Zăpezilor</h4>
+                            <p>Habitat: Platoul Tibet și munții Tian Shan. China găzduiește 60% din habitatul global al acestei specii.</p>
+                        </div>
+
+                        <div class="species-card">
+                            <div class="species-image">
+                                <img src="https://images.unsplash.com/photo-1601933470096-0e593b6f4c5a?w=400" alt="Maimuță" class="content-image">
+                            </div>
+                            <h4>🐵 Maimuța cu Nas Cârn</h4>
+                            <p>Endemică munților din sud-vestul Chinei, adaptată să trăiască la altitudini înalte și temperaturi scăzute.</p>
+                        </div>
+                    </div>
+
+                    <div class="ecosystems-info">
+                        <h3>Ecosisteme Principale</h3>
+                        <ul class="styled-list">
+                            <li><strong>Păduri tropicale pluviale</strong> - Yunnan, Hainan (biodiversitate extrem de ridicată)</li>
+                            <li><strong>Păduri subtropicale</strong> - sud-estul Chinei (cea mai mare biodiversitate)</li>
+                            <li><strong>Păduri temperate</strong> - nord-estul Chinei (Manchuria)</li>
+                            <li><strong>Stepe și pășuni</strong> - Mongolia Interioară, Platoul Tibet</li>
+                            <li><strong>Deșerturi</strong> - Gobi, Taklamakan (ecosisteme adaptate la secetă)</li>
+                            <li><strong>Zone umede</strong> - delta fluviilor, lacuri (importante pentru păsări migratoare)</li>
+                            <li><strong>Ecosisteme alpine</strong> - Himalaya, Platoul Tibet (flora și fauna unică)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resurse" class="content-section slide-in-left">
+                <h2 class="section-heading">Resurse Naturale</h2>
+                <p>
+                    China este bogată în resurse naturale, fiind unul dintre cei mai mari producători mondiali de cărbune, metale rare și alte minerale. Această bogăție a jucat un rol crucial în dezvoltarea economică rapidă a țării.
+                </p>
+
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">⚫</div>
+                        <h3>Cărbune</h3>
+                        <p>Cel mai mare producător și consumator de cărbune din lume. Rezerve estimate: 140 miliarde tone. Asigură ~60% din energia țării.</p>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">🔩</div>
+                        <h3>Metale Rare</h3>
+                        <p>China deține 95% din producția mondială de metale rare, esențiale pentru electronică, turbine eoliene și vehicule electrice.</p>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">⛏️</div>
+                        <h3>Fier și Oțel</h3>
+                        <p>Producător major de minereu de fier. Cel mai mare producător de oțel din lume (peste 50% din producția globală).</p>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">🌊</div>
+                        <h3>Resurse Hidro</h3>
+                        <p>Capacitate hidro teoretică de 680 GW. Barajul celor Trei Defilee este cel mai mare din lume.</p>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">🌾</div>
+                        <h3>Teren Arabil</h3>
+                        <p>Aproximativ 1,4 milioane km² de teren arabil, susținând agricultură intensivă și diverse culturi.</p>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">🌲</div>
+                        <h3>Păduri</h3>
+                        <p>Acoperire forestieră de 23%. Programe masive de reîmpădurire au plantat miliarde de copaci.</p>
+                    </div>
+                </div>
+
+                <div class="environmental-challenges">
+                    <h3>⚠️ Provocări de Mediu</h3>
+                    <p>
+                        Dezvoltarea economică rapidă a dus la provocări semnificative de mediu:
+                    </p>
+                    <ul class="styled-list">
+                        <li><strong>Poluarea aerului</strong> - Industria bazată pe cărbune a creat probleme severe în marile orașe</li>
+                        <li><strong>Deșertificarea</strong> - Expansiunea deșerturilor Gobi și Taklamakan amenință terenurile agricole</li>
+                        <li><strong>Poluarea apei</strong> - Multe râuri și lacuri sunt contaminate de deșeuri industriale</li>
+                        <li><strong>Pierderea biodiversității</strong> - Habitat redus pentru multe specii pe cale de dispariție</li>
+                        <li><strong>Schimbări climatice</strong> - China este cel mai mare emițător de CO2 dar și lider în energie regenerabilă</li>
+                    </ul>
+                    <p class="highlight-box">
+                        🌱 <strong>Inițiative verzi:</strong> China investește masiv în energie solară și eoliană, vehicule electrice și reîmpădurire, vizând neutralitatea carbonică până în 2060.
+                    </p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-heading">Referințe</h2>
+                <ol class="references-list">
+                    <li>Ministry of Natural Resources of China. "Geographical Survey of China 2023"</li>
+                    <li>China Meteorological Administration. "Climate of China Report"</li>
+                    <li>Ministry of Ecology and Environment. "Biodiversity Conservation in China"</li>
+                </ol>
+            </section>
+        </main>
     </div>
 
-    <div id="boxInformatiiGeo">
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Despre</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Despre proiect</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resurse</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Politică confidențialitate</a></li>
+                    <li><a href="#">Termeni utilizare</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            AI vibe coded development by <a href="https://biela.dev/" target="_blank" rel="noopener noreferrer">Biela.dev</a>, powered by <a href="https://teachmecode.ae/" target="_blank" rel="noopener noreferrer">TeachMeCode® Institute</a>
+        </div>
+    </footer>
 
-      <!-- Info Vest -->
-      <div id="boxDeTextInfoGeo1">
-        <p>Vestul este muntos, cu lanțuri impresionante precum Himalaya, unde se află și vârful Everest (pe granița cu Nepal)
-        <a href="https://ro.wikipedia.org/wiki/Everest" target="_blank">
-          <img id="pozaMtEverest" src="Imagini/MtEverest.png" title="Muntele Everest"> 
-        </a>
-        <a href="https://www.google.com/maps/place/Muntele+Everest/@27.9881088,86.9194805,15.5z/data=!4m6!3m5!1s0x39e854a215bd9ebd:0x576dcf806abbab2!8m2!3d27.9881569!4d86.9253667!16zL20vMGJsYmQ?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D" target="_blank">
-          <img id="gMapsMtEv" src="Imagini/HartaMtEverest.png" title="Harta">
-        </a>
-        <p class="textInfoGeo">Altitudini de peste 8000m</p>
-      </div>
-      
-
-      <!-- Info Clima Nord-->
-      <div id="boxDeTextInfoCN">
-        <a href="https://ro.wikipedia.org/wiki/Geografia_Chinei#Clim%C4%83" target="_blank" style="text-decoration: none;color: blue;">
-          <p>Clima in nord are ierni reci și uscate</p>
-        </a>
-      </div>
-      
-
-      <!-- Info Est -->
-      <div id="boxDeTextInfoGeo2">
-        <p> Estul este format din câmpii fertile, traversate de fluviile Yangtze (Chang Jiang) și Huang He (Fluviul Galben), care au susținut civilizațiile agricole chineze.</p>
-        <a href="https://ro.wikipedia.org/wiki/Yangtze" target="_blank">
-          <img id="pozaYangtze" src="Imagini/FluviulYangtze.png" title="Fluviul Yangtze">
-        </a>
-        <a href="https://ro.wikipedia.org/wiki/Fluviul_Galben" target="_blank">
-          <img id="pozaHuangHe" src="Imagini/FluviuHuangHe.png" title="Fluviul Huang He">
-        </a>
-        <p class="textInfoGeo">Altitudini sub 200m</p>
-      </div>
-
-
-      <!-- Info Clima Sud-->
-      <div id="boxDeTextInfoCS">
-        <a href="https://ro.wikipedia.org/wiki/Geografia_Chinei#Clim%C4%83" target="_blank" style="text-decoration: none;color: yellow;">
-          <p>Clima in sud este tropicala, calda și umeda</p>
-        </a>
-      </div>
-
-
-      <!-- Info Mij -->
-      <div id="boxDeTextInfoGeo3">
-        <p> Țara are de asemenea deșerturi (Gobi, Taklamakan), podișuri (Tibet) și o linie de coastă lungă la Marea Chinei de Est și de Sud. </p>
-        <a href="https://ro.wikipedia.org/wiki/De%C8%99ertul_Gobi" target="_blank">
-          <img id="pozaGobi" src="Imagini/desertGobi.png" title="Desertul Gobi">
-        </a>
-        <a href="https://ro.wikipedia.org/wiki/Platoul_Tibet" target="_blank">
-          <img id="pozaTibet" src="Imagini/podisTibet.png" title="Podisul Tibet">
-        </a>
-        <p class="textInfoGeo">Altitudini de peste 4000m</p>
-      </div>
-
-    </div>
-
+    <script src="script.js"></script>
 </body>
-
-<button onclick="location.href='index.html'">⏪ Înapoi</button>
-
 </html>
